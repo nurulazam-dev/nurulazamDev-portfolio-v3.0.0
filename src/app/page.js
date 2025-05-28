@@ -1,4 +1,5 @@
 "use client";
+import Contact from "@/Components/Home/Contact";
 import Hero from "@/Components/Home/Hero";
 import Services from "@/Components/Home/Services";
 import Skills from "@/Components/Home/Skills";
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Skills />
+      <Contact />
     </main>
   );
 }

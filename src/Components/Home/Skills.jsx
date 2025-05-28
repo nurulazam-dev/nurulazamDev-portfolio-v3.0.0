@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <section className="container mx-auto py-12 lg:mb-12 mb-8">
-      <div className="text-center mb-12">
+    <section className="container mx-auto py-5 lg:mb-12 mb-8">
+      <div className="text-center mb-16">
         <h4 className="uppercase text-blue-600 font-semibold tracking-widest mb-2 animate-fade-in-down">
           Skills
         </h4>

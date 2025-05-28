@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
+import HeroImg from "../../assets/images/hero/mnaHeroImg.png";
 
 const Hero = () => {
   return (
@@ -64,7 +65,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-200 via-purple-200 to-transparent rounded-full blur-2xl opacity-70 z-0"></div>
             <Image
-              src="https://nurulazam-dev.web.app/assets/mnaHeroImg-BlpkimJB.png"
+              src={HeroImg}
               alt="nurulazam dev"
               className="relative z-10 rounded-2xl shadow-2xl border-4 border-white"
               height={400}

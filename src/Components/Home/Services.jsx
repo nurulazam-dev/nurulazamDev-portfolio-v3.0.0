@@ -1,10 +1,11 @@
 "use client";
 import { serviceData } from "@/assets/data/dataBank";
+import Image from "next/image";
 
 const Services = () => {
   return (
-    <section className="container mx-auto py-12 lg:mb-12 mb-8">
-      <div className="text-center mb-10">
+    <section className="container mx-auto py-12 mb-4">
+      <div className="text-center mb-3">
         <h4 className="uppercase text-blue-600 font-semibold tracking-widest mb-2 animate-fade-in-down">
           My Services
         </h4>
@@ -16,19 +17,21 @@ const Services = () => {
           web presence with modern technologies and best practices.
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 grid-cols-1 justify-items-center px-5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-1 grid-cols-1 justify-items-center px-5">
         {serviceData?.map((service, index) => (
           <div
             key={index}
-            className="relative group bg-white rounded-2xl shadow-xl p-8 w-full max-w-xs flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
+            className="relative group bg-white rounded-2xl hover:rounded-none shadow-xl p-8 w-full max-w-xs flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
             style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
           >
             <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-tr from-blue-100 via-purple-100 to-white rounded-full blur-xl opacity-70 z-0"></div>
             <div className="relative z-10 flex flex-col items-center">
-              <img
+              <Image
+                height={144}
+                width={144}
                 src={service?.image}
                 alt={service?.title}
-                className="h-20 w-20 object-contain mb-4 drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
+                className="h-36 w-36 object-contain mb-2 drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
               />
               <h2 className="text-xl font-bold text-blue-700 mb-2 text-center">
                 {service?.title} Development
