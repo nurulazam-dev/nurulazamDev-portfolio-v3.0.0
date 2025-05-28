@@ -26,7 +26,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main className="mt-8 md:mt-10 lg:mt-15">
+          <div className="mx-auto">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>

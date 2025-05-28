@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="w-full px-6 py-4 bg-white shadow-md flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 bg-white/90 backdrop-blur shadow-md flex items-center justify-between transition-all duration-300">
       <div className="flex items-center gap-2">
         <Link href="/">
           <span className="text-xl font-bold text-gray-900 cursor-pointer">

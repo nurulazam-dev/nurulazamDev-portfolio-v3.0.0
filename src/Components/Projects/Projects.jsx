@@ -42,9 +42,9 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen p-6 sm:p-16 font-[family-name:var(--font-geist-sans)] flex flex-col items-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <main className="w-full max-w-6xl">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-gray-900 animate-fade-in-down">
+    <div className="min-h-screen px-6 sm:px-16 font-[family-name:var(--font-geist-sans)] flex flex-col items-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <main className="w-full max-w-6xl pt-6">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-7 text-center text-gray-900 animate-fade-in-down">
           My Projects
         </h1>
         <div className="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">

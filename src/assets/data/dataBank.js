@@ -1,7 +1,7 @@
-/* import blogImg3 from "../images/Blogs_banner/different_web_&_software_developer.png";
+import blogImg3 from "../images/Blogs_banner/different_web_&_software_developer.jpg";
 import blogImg2 from "../images/Blogs_banner/dimand_web_development.jpeg";
 import blogImg1 from "../images/Blogs_banner/learn_react.jpeg";
-import blogImg4 from "../images/Blogs_banner/mobile_app_vs_web_dev.jpeg"; */
+import blogImg4 from "../images/Blogs_banner/mobile_app_vs_web_dev.jpeg";
 import serviceImg2 from "../images/services/backend.png";
 import serviceImg1 from "../images/services/frontend.png";
 import serviceImg3 from "../images/services/full-stack.png";
@@ -14,6 +14,29 @@ import project4Img from "../images/projects/1-Projects_Thumbnail/4-wind-travels.
 import project5Img from "../images/projects/1-Projects_Thumbnail/5-mna-munna-photographer.png";
 import project6Img from "../images/projects/1-Projects_Thumbnail/6-mna-bike-bazar.png";
 import project7Img from "../images/projects/1-Projects_Thumbnail/7-panda-eCommerce.png";
+import bootstrapImg from "../images/programming-logo/bootstrap.png";
+import cssImg from "../images/programming-logo/css.png";
+import daisyUIImg from "../images/programming-logo/daisyUI.png";
+import expressImg from "../images/programming-logo/express.png";
+import figmaImg from "../images/programming-logo/figma.png";
+import firebaseImg from "../images/programming-logo/firebase.png";
+import gitImg from "../images/programming-logo/git.png";
+import githubImg from "../images/programming-logo/github.png";
+import herokuImg from "../images/programming-logo/heroku.png";
+import htmlImg from "../images/programming-logo/html.png";
+import javascriptImg from "../images/programming-logo/javascript.png";
+import mongodbImg from "../images/programming-logo/mongodb.png";
+import mongooseImg from "../images/programming-logo/mongoose.png";
+import netlifyImg from "../images/programming-logo/netlify.png";
+import nextJSImg from "../images/programming-logo/next-js.png";
+import nodeImg from "../images/programming-logo/node.png";
+import reactDomImg from "../images/programming-logo/react-dom.png";
+import reactImg from "../images/programming-logo/react.png";
+import reduxImg from "../images/programming-logo/redux.png";
+import renderImg from "../images/programming-logo/render.png";
+import tailwindImg from "../images/programming-logo/tailwind.png";
+import vercelImg from "../images/programming-logo/vercel.png";
+import vsCodeImg from "../images/programming-logo/vs-code.png";
 
 // Projects/Portfolio_Data
 export const projectsData = [
@@ -294,8 +317,149 @@ export const serviceData = [
   },
 ];
 
+// InfiniteScroll_Data
+export const scrollData = [
+  {
+    title: "HTML5",
+    image: htmlImg,
+    color: "#ea580c",
+    progressValue: 95,
+  },
+  {
+    title: "CSS3",
+    image: cssImg,
+    color: "#1d4ed8",
+    progressValue: 90,
+  },
+  {
+    title: "Bootstrap",
+    image: bootstrapImg,
+    color: "#6d28d9",
+    progressValue: 80,
+  },
+  {
+    title: "Tailwind CSS",
+    image: tailwindImg,
+    color: "teal-500",
+    progressValue: 95,
+  },
+  {
+    title: "DaisyUI",
+    image: daisyUIImg,
+    color: "emerald-500",
+    progressValue: 90,
+  },
+  {
+    title: "Javascript",
+    image: javascriptImg,
+    color: "#eab308",
+    progressValue: 70,
+  },
+  {
+    title: "React JS",
+    image: reactImg,
+    color: "#22d3ee",
+    progressValue: 90,
+  },
+  {
+    title: "Next JS",
+    image: nextJSImg,
+    color: "stone-950",
+    progressValue: 20,
+  },
+  {
+    title: "React Router",
+    image: reactDomImg,
+    color: "red-700",
+    progressValue: 80,
+  },
+  {
+    title: "Redux",
+    image: reduxImg,
+    color: "violet-800",
+    progressValue: 30,
+  },
+  {
+    title: "Express JS",
+    image: expressImg,
+    color: "gray-950",
+    progressValue: 70,
+  },
+  {
+    title: "Node JS",
+    image: nodeImg,
+    color: "green-600",
+    progressValue: 85,
+  },
+  {
+    title: "Mongodb",
+    image: mongodbImg,
+    color: "#15803d",
+    progressValue: 90,
+  },
+  {
+    title: "Mongoose",
+    image: mongooseImg,
+    color: "#65a30d",
+    progressValue: 80,
+  },
+  {
+    title: "Git",
+    image: gitImg,
+    color: "#c2410c",
+    progressValue: 80,
+  },
+  {
+    title: "VS Code",
+    image: vsCodeImg,
+    color: "#1d4ed8",
+    progressValue: 95,
+  },
+  {
+    title: "GitHub",
+    image: githubImg,
+    color: "gray-950",
+    progressValue: 92,
+  },
+  {
+    title: "Firebase",
+    image: firebaseImg,
+    color: "orange-500",
+    progressValue: 83,
+  },
+  {
+    title: "Figma",
+    image: figmaImg,
+    color: "orange-600",
+    progressValue: 40,
+  },
+  {
+    title: "Netlify",
+    image: netlifyImg,
+    color: "cyan-400",
+    progressValue: 90,
+  },
+  {
+    title: "Heroku",
+    image: herokuImg,
+    color: "violet-800",
+    progressValue: 70,
+  },
+  {
+    title: "Render",
+    image: renderImg,
+    color: "teal-400",
+    progressValue: 50,
+  },
+  {
+    title: "Vercel",
+    image: vercelImg,
+    color: "gray-950",
+    progressValue: 50,
+  },
+];
 // blogs_data
-/* export const blogData = [
+export const blogData = [
   {
     id: "blog001",
     image: blogImg1,
@@ -373,4 +537,4 @@ export const serviceData = [
     text_six:
       "সারা বিশ্বে ওয়েব ডেভেলপারদের স্যালারি বছরে আনুমানিক ৭৩ হাজার ডলার থেকে ১ লক্ষ ডলার। আর অ্যাপ ডেভেলপারদের স্যালারি বছরে ৯০ হাজার ডলার থেখে ১ লক্ষ ২০ হাজার ডলার পর্যন্ত হয়ে থাকে। তবে উন্নত বিশ্বের সাথে এই উপমহাদেশের বাৎসরিক স্যালারির পার্থক্য অনেক বেশি। তাই দেশিও প্রতিষ্ঠানের চেয়ে আমাদের দেশের ভালো ভালো ডেভেলপাররা বাহিরের দেশের প্রতিষ্ঠানের সাথে কাজ করতে বেশি আগ্রহী। Copy: Programming Hero",
   },
-]; */
+];
