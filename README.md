@@ -1,4 +1,3 @@
 # nurulazamDev Portfolio v2.1.0
 
-nurulazamDev-portfolio-v2.1
-This is nurulazamDev portfolio v2.1 ( latest version ) website repo
+This is nurulazamDev portfolio v_2.1.0 ( latest version ) website repo
