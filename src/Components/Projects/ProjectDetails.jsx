@@ -38,9 +38,9 @@ const ProjectDetails = () => {
             alt={project?.title}
             width={500}
             height={400}
-            className="w-full object-cover rounded shadow mb-6"
+            className="w-full object-cover rounded shadow mb-3"
           />
-          <div className="flex justify-between items-center mb-5 border">
+          <div className="flex justify-between items-center mb-5">
             <div>
               <h1 className="text-3xl font-bold text-blue-700">
                 {project?.title}
@@ -74,23 +74,28 @@ const ProjectDetails = () => {
               </Link>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-4">
             {project?.technologies?.map((tech) => (
               <span
                 key={tech}
-                className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium"
+                className="bg-blue-100 text-blue-700 px-2 py-[7px] rounded text-xs font-medium"
               >
                 {tech}
               </span>
             ))}
           </div>
 
-          <li>
-            <p className="text-gray-800 mb-1">{project?.des1}</p>
-          </li>
-          <li>
-            <p className="text-gray-800 mb-6">{project?.des2}</p>
-          </li>
+          <ul className="list-disc pl-5 space-y-2 mb-6">
+            {project?.des1 && (
+              <li className="text-gray-800">{project?.des1}</li>
+            )}
+            {project?.des2 && (
+              <li className="text-gray-800">{project?.des2}</li>
+            )}
+            {project?.des3 && (
+              <li className="text-gray-800">{project?.des3}</li>
+            )}
+          </ul>
         </div>
       </div>
       <style jsx global>{`
