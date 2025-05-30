@@ -11,13 +11,28 @@ const categories = [
   { label: "Backend", value: "backend" },
 ];
 
+const INITIAL_PROJECTS = 3;
+const MORE_PROJECTS = 3;
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_PROJECTS);
 
   const filteredProjects =
     selectedCategory === "all"
       ? projectsData
       : projectsData.filter((project) => project.category === selectedCategory);
+
+  // Reset visibleCount when category changes
+  React.useEffect(() => {
+    setVisibleCount(INITIAL_PROJECTS);
+  }, [selectedCategory]);
+
+  const handleShowMore = () => {
+    setVisibleCount((prev) => prev + MORE_PROJECTS);
+  };
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   return (
     <div className="min-h-screen px-6 sm:px-16 font-[family-name:var(--font-geist-sans)] flex flex-col items-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -46,12 +61,12 @@ const Projects = () => {
           ))}
         </div>
         <div className="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-          {filteredProjects?.length === 0 && (
+          {visibleProjects.length === 0 && (
             <div className="col-span-full text-center text-gray-500 py-10">
               No projects found in this category.
             </div>
           )}
-          {filteredProjects?.map((project, idx) => (
+          {visibleProjects.map((project, idx) => (
             <div
               key={project?.id}
               className="bg-white shadow-xl rounded-xl p-4 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
@@ -90,6 +105,17 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        {/* More Project Button */}
+        {visibleCount < filteredProjects.length && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={handleShowMore}
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-purple-700 hover:to-blue-700 transition"
+            >
+              More Projects
+            </button>
+          </div>
+        )}
       </main>
       {/* Animations */}
       <style jsx global>{`
