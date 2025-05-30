@@ -20,13 +20,17 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur shadow-lg transition-all duration-300">
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-3">
-        {/* Logo */}
+        {/* ======================
+                 Logo
+        ====================== */}
         <Link href="/" className="flex items-center gap-2 group">
           <span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 tracking-tight group-hover:drop-shadow-lg transition">
             Nurul Azam
           </span>
         </Link>
-        {/* Hamburger */}
+        {/* ======================
+                 Hamburger
+        ====================== */}
         <button
           className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           aria-label="Toggle navigation"
@@ -48,7 +52,9 @@ const Header = () => {
             }`}
           ></span>
         </button>
-        {/* Navigation */}
+        {/* ======================
+               Navigation
+        ====================== */}
         <nav
           className={`
             flex-col md:flex-row md:flex gap-2 md:gap-4
