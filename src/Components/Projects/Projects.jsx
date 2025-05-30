@@ -49,7 +49,7 @@ const Projects = () => {
               </div> */}
               <Link
                 href={`/projects/${project?.id}`}
-                className="w-full px-3 py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700 transition font-medium"
+                className="w-full px-3 py-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition transform focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
               >
                 Project Details
               </Link>

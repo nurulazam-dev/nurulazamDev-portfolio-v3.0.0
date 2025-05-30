@@ -1,4 +1,4 @@
-const projectsData = [
+export const projectsData = [
   {
     id: "project01",
     category: "fullStack",
