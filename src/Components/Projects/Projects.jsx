@@ -16,12 +16,15 @@ const Projects = () => {
             <div
               key={project?.id}
               className="bg-white shadow-xl rounded-2xl p-4 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
-              style={{ animationDelay: `${idx * 0.1 + 0.2}s` }}
+              style={{
+                animationDelay: `${idx * 0.1 + 0.2}s`,
+                minHeight: "370px",
+              }}
             >
               <div className="overflow-hidden rounded-xl mb-4">
                 <Image
                   src={project?.imageLink}
-                  alt={project?.title}
+                  alt={project?.title || "Project Image"}
                   width={500}
                   height={300}
                   className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
@@ -47,12 +50,14 @@ const Projects = () => {
                   </span>
                 ))}
               </div> */}
-              <Link
-                href={`/projects/${project?.id}`}
-                className="w-full px-3 py-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition transform focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-              >
-                Project Details
-              </Link>
+              <div className="mt-auto pt-2">
+                <Link
+                  href={`/projects/${project?.id}`}
+                  className="w-full block px-3 py-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition transform focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                >
+                  Project Details
+                </Link>
+              </div>
             </div>
           ))}
         </div>
