@@ -7,11 +7,15 @@ import HeroImg from "../../assets/images/hero/mnaHeroImg.png";
 const Hero = () => {
   return (
     <section className="relative w-full py-10 bg-gradient-to-br from-blue-50 via-white to-purple-100 overflow-hidden">
-      {/* Decorative blurred circles */}
+      {/* ======================
+             circles part
+        ====================== */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-200 rounded-full opacity-30 blur-3xl animate-float-slow z-0"></div>
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-200 rounded-full opacity-30 blur-3xl animate-float-slower z-0"></div>
       <div className="relative z-10 mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-5 px-10">
-        {/* Details */}
+        {/* ======================
+               Details part
+        ====================== */}
         <div className="w-full md:w-1/2 flex flex-col items-start justify-center animate-fade-in-left">
           <p className="uppercase tracking-widest text-xs font-semibold text-blue-600 mb-2 animate-fade-in-down">
             Welcome to my portfolio website
@@ -60,6 +64,9 @@ const Hero = () => {
             </a>
           </div>
         </div>
+        {/* ======================
+                Image part
+        ====================== */}
         {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center items-center animate-fade-in-right">
           <div className="relative">
@@ -75,7 +82,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* Animations */}
+      {/* ======================
+               Animations
+        ====================== */}
       <style jsx global>{`
         @keyframes fade-in-down {
           0% {

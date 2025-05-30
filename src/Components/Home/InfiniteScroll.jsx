@@ -2,7 +2,6 @@ import { scrollData } from "@/assets/data/dataBank";
 import Image from "next/image";
 
 const InfiniteScroll = () => {
-  // Duplicate data for seamless infinite scroll effect
   const firstLineData = [...scrollData, ...scrollData];
   const secondLineData = [...scrollData, ...scrollData];
 
@@ -33,11 +32,11 @@ const InfiniteScroll = () => {
                 />
                 <div className="flex items-center py-[3px]">
                   <progress
-                    className="progress border-2 border-[#ff7c3a] bg-white h-[8px] w-[70px] rounded-full"
+                    className="progress border-1 border-black bg-white h-[8px] w-[70px] rounded-full"
                     value={data?.progressValue}
                     max="100"
                   ></progress>
-                  <span className="text-[10px] font-bold ps-[4px] text-orange-500">
+                  <span className="text-[10px] font-bold ps-[4px] text-[#272b9d]">
                     {data?.progressValue}%
                   </span>
                 </div>
@@ -66,7 +65,7 @@ const InfiniteScroll = () => {
                 />
                 <div className="flex items-center py-[3px]">
                   <progress
-                    className="progress border-2 border-purple-400 bg-white h-[8px] w-[70px] rounded-full"
+                    className="progress border-1 border-black bg-white h-[8px] w-[70px] rounded-full"
                     value={data?.progressValue}
                     max="100"
                   ></progress>

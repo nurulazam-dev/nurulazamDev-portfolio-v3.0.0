@@ -1,4 +1,5 @@
 // "use client";
+<link rel="icon" href="favicon.png" />;
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/Components/Shared/Header";
@@ -16,6 +17,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Nurul Azam",
+  icons: {
+    icon: "/favicon.png",
+  },
   description: "Web Developer (@nurulazamDev)",
 };
 

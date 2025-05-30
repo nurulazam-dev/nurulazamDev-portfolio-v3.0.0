@@ -2,43 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-const projects = [
-  {
-    id: "portfolio",
-    title: "Portfolio Website",
-    description:
-      "A personal portfolio built with Next.js and Tailwind CSS to showcase my projects and skills.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
-    image:
-      "https://nurulazam-dev.web.app/assets/1-mna-computer-manufacture-9OlILc0F.png",
-    link: "https://nurulazam.dev",
-    github: "https://github.com/nurulazam/portfolio",
-  },
-  {
-    id: "ecommerce",
-    title: "E-commerce Platform",
-    description:
-      "A full-featured MERN stack e-commerce application with authentication, cart, and payment integration.",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
-    image:
-      "https://nurulazam-dev.web.app/assets/1-mna-computer-manufacture-9OlILc0F.png",
-    link: "https://myecommerce.example.com",
-    github: "https://github.com/nurulazam/mern-ecommerce",
-  },
-  {
-    id: "blog",
-    title: "Blog Platform",
-    description:
-      "A multi-user blog platform with Markdown support and RESTful API.",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
-    image:
-      "https://nurulazam-dev.web.app/assets/1-mna-computer-manufacture-9OlILc0F.png",
-    link: "https://myblog.example.com",
-    github: "https://github.com/nurulazam/mern-blog",
-  },
-  // Add more projects as needed
-];
+import { projectsData } from "@/assets/data/dataBank";
 
 const Projects = () => {
   return (
@@ -48,15 +12,15 @@ const Projects = () => {
           My Projects
         </h1>
         <div className="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-          {projects.map((project, idx) => (
+          {projectsData.map((project, idx) => (
             <div
-              key={project.id}
+              key={project?.id}
               className="bg-white shadow-xl rounded-2xl p-4 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
               style={{ animationDelay: `${idx * 0.1 + 0.2}s` }}
             >
               <div className="overflow-hidden rounded-xl mb-4">
                 <Image
-                  src={project?.image}
+                  src={project?.imageLink}
                   alt={project?.title}
                   width={500}
                   height={300}
@@ -64,13 +28,16 @@ const Projects = () => {
                   loading="lazy"
                 />
               </div>
-              <h2 className="text-xl font-semibold mb-2 text-blue-700">
+              <h2 className="text-xl font-bold text-blue-700">
                 {project?.title}
               </h2>
+              <h3 className="text-[16px] font-[500] mb-2 text-violet-600">
+                {project?.projectType}
+              </h3>
               <p className="text-gray-700 mb-3 line-clamp-3">
-                {project?.description}
+                {project?.subTitle}
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
+              {/* <div className="flex flex-wrap gap-2 mb-4">
                 {project?.tech?.map((tech) => (
                   <span
                     key={tech}
@@ -79,31 +46,13 @@ const Projects = () => {
                     {tech}
                   </span>
                 ))}
-              </div>
-              <div className="flex gap-3 mt-auto">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline font-semibold"
-                >
-                  Live
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:underline font-semibold"
-                >
-                  GitHub
-                </a>
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="ml-auto px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition font-medium"
-                >
-                  Details
-                </Link>
-              </div>
+              </div> */}
+              <Link
+                href={`/projects/${project?.id}`}
+                className="w-full px-3 py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700 transition font-medium"
+              >
+                Project Details
+              </Link>
             </div>
           ))}
         </div>
