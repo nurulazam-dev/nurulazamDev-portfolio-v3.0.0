@@ -1,15 +1,16 @@
 "use client";
-import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { useMemo } from "react";
+import { useParams } from "next/navigation";
+import Img1 from "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg";
 
-// Example blog data (replace with your own or fetch from API)
 const blogs = [
   {
     id: "1",
+    slug: "mastering-react-tips-tricks",
     title: "Mastering React: Tips & Tricks",
-    image:
-      "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg",
+    image: Img1,
     date: "May 2025",
     desc: "Discover advanced React techniques and best practices to build scalable web apps.",
     content: `
@@ -25,9 +26,9 @@ const blogs = [
   },
   {
     id: "2",
+    slug: "web-development-trends-2025",
     title: "Web Development Trends 2025",
-    image:
-      "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg",
+    image: Img1,
     date: "April 2025",
     desc: "Stay ahead with the latest trends and technologies shaping the web development landscape.",
     content: `
@@ -43,9 +44,9 @@ const blogs = [
   },
   {
     id: "3",
+    slug: "difference-web-vs-software-developer",
     title: "Difference: Web vs. Software Developer",
-    image:
-      "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg",
+    image: Img1,
     date: "March 2025",
     desc: "Understand the key differences between web and software development roles.",
     content: `
@@ -64,7 +65,8 @@ const blogs = [
 const BlogDetails = () => {
   const params = useParams();
   const { id } = params;
-  const blog = blogs.find((b) => b.id === id);
+
+  const blog = useMemo(() => blogs.find((b) => b.id === id), [id]);
 
   if (!blog) {
     return (
@@ -89,13 +91,15 @@ const BlogDetails = () => {
           ← Back to Blogs
         </Link>
         <div className="mb-6">
-          <Image
-            height={256}
-            width={512}
-            src={blog.image}
-            alt={blog.title}
-            className="w-full h-64 object-cover rounded-xl shadow mb-6 transition-transform duration-500 hover:scale-105"
-          />
+          <div className="flex justify-center">
+            <Image
+              src={blog.image}
+              alt={blog.title}
+              width={500}
+              height={280}
+              className="object-cover rounded shadow mb-6 transition-transform duration-500 hover:scale-105"
+            />
+          </div>
           <h1 className="text-3xl font-extrabold mb-2 text-blue-700 animate-fade-in-down">
             {blog.title}
           </h1>

@@ -7,6 +7,7 @@ import Img1 from "../../assets/images/Blogs_banner/different_web_&_software_deve
 const blogs = [
   {
     id: 1,
+    slug: "mastering-react-tips-tricks",
     title: "Mastering React: Tips & Tricks",
     image: Img1,
     date: "May 2025",
@@ -16,6 +17,7 @@ const blogs = [
   },
   {
     id: 2,
+    slug: "web-development-trends-2025",
     title: "Web Development Trends 2025",
     image: Img1,
     date: "April 2025",
@@ -25,6 +27,7 @@ const blogs = [
   },
   {
     id: 3,
+    slug: "difference-web-vs-software-developer",
     title: "Difference: Web vs. Software Developer",
     image: Img1,
     date: "March 2025",
@@ -54,8 +57,7 @@ const Blogs = () => {
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
         {blogs.map((blog, idx) => (
-          <Link
-            href={blog.link}
+          <div
             key={blog.id}
             className="group relative bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
             style={{ animationDelay: `${idx * 0.1 + 0.2}s` }}
@@ -94,13 +96,12 @@ const Blogs = () => {
               </div>
             </div>
             <Link
-              //   href={`/blogs/${blog?.title.toLowerCase().replace(/ /g, "-")}`}
               href={`/blogs/${blog?.id}`}
               className="absolute bottom-4 right-4 text-blue-600 font-semibold group-hover:underline transition"
             >
               Read More →
             </Link>
-          </Link>
+          </div>
         ))}
       </div>
       <style jsx global>{`
