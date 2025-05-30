@@ -139,7 +139,7 @@ const Contact = () => {
                     value={data.fullName}
                     onChange={InputEvent}
                     required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
+                    className="w-full px-4 py-3 border border-gray-200 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
                     placeholder="Your Name"
                   />
                 </div>
@@ -153,7 +153,7 @@ const Contact = () => {
                     value={data.phone}
                     onChange={InputEvent}
                     required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
+                    className="w-full px-4 py-3 border border-gray-200 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
                     placeholder="Your Phone"
                   />
                 </div>
@@ -168,7 +168,7 @@ const Contact = () => {
                   value={data.email}
                   onChange={InputEvent}
                   required
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
+                  className="w-full px-4 py-3 border border-gray-200 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
                   placeholder="you@email.com"
                 />
               </div>
@@ -182,7 +182,7 @@ const Contact = () => {
                   value={data.subject}
                   onChange={InputEvent}
                   required
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
+                  className="w-full px-4 py-3 border border-gray-200 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40"
                   placeholder="Subject"
                 />
               </div>
@@ -196,13 +196,13 @@ const Contact = () => {
                   onChange={InputEvent}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40 resize-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition bg-blue-50/40 resize-none"
                   placeholder="Type your message..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
               >
                 Send Message
               </button>

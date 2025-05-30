@@ -1,21 +1,60 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { projectsData } from "@/assets/data/dataBank";
 
+const categories = [
+  { label: "All", value: "all" },
+  { label: "Full Stack", value: "fullStack" },
+  { label: "Frontend", value: "frontend" },
+  { label: "Backend", value: "backend" },
+];
+
 const Projects = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const filteredProjects =
+    selectedCategory === "all"
+      ? projectsData
+      : projectsData.filter((project) => project.category === selectedCategory);
+
   return (
     <div className="min-h-screen px-6 sm:px-16 font-[family-name:var(--font-geist-sans)] flex flex-col items-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <main className="w-full max-w-6xl pt-6">
         <h1 className="text-4xl sm:text-5xl font-bold mb-7 text-center text-gray-900 animate-fade-in-down">
           My Projects
         </h1>
+        {/* ======================
+            Category Filter part
+          ====================== */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {categories?.map((cat) => (
+            <button
+              key={cat?.value}
+              onClick={() => setSelectedCategory(cat?.value)}
+              className={`px-4 py-2 rounded font-semibold border transition
+                ${
+                  selectedCategory === cat?.value
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow"
+                    : "bg-white text-blue-700 border-blue-200 hover:bg-blue-50"
+                }
+              `}
+            >
+              {cat?.label}
+            </button>
+          ))}
+        </div>
         <div className="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-          {projectsData.map((project, idx) => (
+          {filteredProjects?.length === 0 && (
+            <div className="col-span-full text-center text-gray-500 py-10">
+              No projects found in this category.
+            </div>
+          )}
+          {filteredProjects?.map((project, idx) => (
             <div
               key={project?.id}
-              className="bg-white shadow-xl rounded-2xl p-4 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
+              className="bg-white shadow-xl rounded-xl p-4 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
               style={{
                 animationDelay: `${idx * 0.1 + 0.2}s`,
                 minHeight: "370px",
@@ -40,16 +79,6 @@ const Projects = () => {
               <p className="text-gray-700 mb-3 line-clamp-3">
                 {project?.subTitle}
               </p>
-              {/* <div className="flex flex-wrap gap-2 mb-4">
-                {project?.tech?.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div> */}
               <div className="mt-auto pt-2">
                 <Link
                   href={`/projects/${project?.id}`}
