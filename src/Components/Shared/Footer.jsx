@@ -1,17 +1,18 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import swal from "sweetalert";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-r from-blue-50 via-white to-purple-100 py-8 px-4 mt-12 animate-footer-fade-in">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
-        {/* Logo & About */}
-        <div className="flex flex-col items-center md:items-start">
-          <span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 tracking-tight mb-2">
+    <footer className="w-full bg-gradient-to-br from-blue-100 via-white to-purple-100 pt-12 pb-6 px-4 mt-16 animate-footer-fade-in">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 items-start">
+        {/* Brand & About */}
+        <div className="flex flex-col items-center md:items-start col-span-1">
+          <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 tracking-tight mb-2 animate-footer-logo">
             Nurul Azam
           </span>
-          <p className="text-gray-600 text-sm max-w-xs mb-2 text-center md:text-left">
+          <p className="text-gray-600 text-sm max-w-xs mb-3 text-center md:text-left">
             MERN Stack Developer passionate about building modern, scalable, and
             user-friendly web applications.
           </p>
@@ -63,9 +64,13 @@ const Footer = () => {
               </svg>
             </a>
           </div>
+          <div className="mt-4 text-xs text-gray-400 text-center md:text-left">
+            <span className="block">Based in Bangladesh</span>
+            <span className="block">Open for freelance & remote work</span>
+          </div>
         </div>
         {/* Quick Links */}
-        <div className="flex flex-col items-center md:items-start gap-2">
+        <div className="flex flex-col items-center md:items-start gap-2 col-span-1">
           <span className="font-semibold text-gray-700 mb-1">Quick Links</span>
           <Link
             href="/"
@@ -98,25 +103,77 @@ const Footer = () => {
             Contact
           </Link>
         </div>
+        {/* Contact Info */}
+        <div className="flex flex-col items-center md:items-start gap-2 col-span-1">
+          <span className="font-semibold text-gray-700 mb-1">Contact Info</span>
+          <span className="text-gray-500 text-sm flex items-center gap-1">
+            <svg
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="inline"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg>
+            Mohammad Nurul Azam
+          </span>
+          <span className="text-gray-500 text-sm flex items-center gap-1">
+            <svg
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="inline"
+              viewBox="0 0 24 24"
+            >
+              <path d="M21 8V7l-3 2.29V8c0-3.31-2.69-6-6-6S3 4.69 3 8v1.29L0 7v1l12 7 12-7z" />
+            </svg>
+            nurulazam.dev@gmail.com
+          </span>
+          <span className="text-gray-500 text-sm flex items-center gap-1">
+            <svg
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="inline"
+              viewBox="0 0 24 24"
+            >
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4.5A1 1 0 013 3.5H6.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z" />
+            </svg>
+            +880 1881-131834
+          </span>
+          <span className="text-gray-500 text-sm flex items-center gap-1">
+            <svg
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="inline"
+              viewBox="0 0 24 24"
+            >
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4.5A1 1 0 013 3.5H6.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z" />
+            </svg>
+            +880 1830-086238
+          </span>
+        </div>
         {/* Newsletter */}
-        <div className="flex flex-col items-center md:items-start gap-2">
+        <div className="flex flex-col items-center md:items-start gap-2 col-span-1">
           <span className="font-semibold text-gray-700 mb-1">Newsletter</span>
           <form
-            className="flex gap-2"
+            className="flex gap-2 w-full"
             onSubmit={(e) => {
               e.preventDefault();
-              alert("Thank you for subscribing!");
+              swal("Thank You!", "You are successfully subscribing me");
             }}
           >
             <input
               type="email"
               required
               placeholder="Your email"
-              className="px-3 py-2 rounded-l-lg border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="px-3 py-2 rounded-l-md border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
             />
             <button
               type="submit"
-              className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-r-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition"
+              className="px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-r-md font-semibold hover:from-purple-600 hover:to-blue-600 transition"
             >
               Subscribe
             </button>
@@ -126,14 +183,25 @@ const Footer = () => {
           </span>
         </div>
       </div>
-      <div className="mt-8 text-center text-gray-500 text-sm animate-footer-fade-in">
+      <div className="mt-10 text-center text-gray-500 text-sm animate-footer-fade-in">
         <span>
           © {new Date().getFullYear()} nurulazam-dev. All rights reserved.
         </span>
+        <div className="flex justify-center gap-4 mt-2 text-xs">
+          <a href="/privacy-policy" className="hover:text-blue-700 transition">
+            Privacy Policy
+          </a>
+          <a href="/terms" className="hover:text-blue-700 transition">
+            Terms of Service
+          </a>
+        </div>
       </div>
       <style jsx>{`
         .animate-footer-fade-in {
           animation: footer-fade-in 1.2s both;
+        }
+        .animate-footer-logo {
+          animation: footer-logo-pop 1.2s both;
         }
         @keyframes footer-fade-in {
           0% {
@@ -143,6 +211,16 @@ const Footer = () => {
           100% {
             opacity: 1;
             transform: translateY(0);
+          }
+        }
+        @keyframes footer-logo-pop {
+          0% {
+            opacity: 0;
+            transform: scale(0.8) translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
           }
         }
       `}</style>
