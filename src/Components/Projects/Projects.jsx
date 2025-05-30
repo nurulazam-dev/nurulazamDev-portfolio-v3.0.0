@@ -11,7 +11,7 @@ const categories = [
   { label: "Backend", value: "backend" },
 ];
 
-const INITIAL_PROJECTS = 3;
+const INITIAL_PROJECTS = 6;
 const MORE_PROJECTS = 3;
 
 const Projects = () => {
@@ -36,7 +36,7 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen px-6 sm:px-16 font-[family-name:var(--font-geist-sans)] flex flex-col items-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <main className="w-full max-w-6xl pt-6">
+      <main className="w-full max-w-6xl py-7">
         <h1 className="text-4xl sm:text-5xl font-bold mb-7 text-center text-gray-900 animate-fade-in-down">
           My Projects
         </h1>
@@ -110,7 +110,7 @@ const Projects = () => {
           <div className="flex justify-center mt-8">
             <button
               onClick={handleShowMore}
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-purple-700 hover:to-blue-700 transition"
+              className="px-6 py-3 bg-green-700 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition"
             >
               More Projects
             </button>
