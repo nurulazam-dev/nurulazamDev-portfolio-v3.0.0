@@ -1,14 +1,14 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Img1 from "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg";
 
-// Example blog data (replace with your own or fetch from API)
 const blogs = [
   {
     id: 1,
     title: "Mastering React: Tips & Tricks",
-    image:
-      "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg",
+    image: Img1,
     date: "May 2025",
     desc: "Discover advanced React techniques and best practices to build scalable web apps.",
     tags: ["React", "Frontend", "Tips"],
@@ -17,8 +17,7 @@ const blogs = [
   {
     id: 2,
     title: "Web Development Trends 2025",
-    image:
-      "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg",
+    image: Img1,
     date: "April 2025",
     desc: "Stay ahead with the latest trends and technologies shaping the web development landscape.",
     tags: ["Web", "Trends", "Tech"],
@@ -27,8 +26,7 @@ const blogs = [
   {
     id: 3,
     title: "Difference: Web vs. Software Developer",
-    image:
-      "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg",
+    image: Img1,
     date: "March 2025",
     desc: "Understand the key differences between web and software development roles.",
     tags: ["Career", "Web", "Software"],
@@ -53,9 +51,10 @@ const Blogs = () => {
           trends.
         </p>
       </div>
+
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
         {blogs.map((blog, idx) => (
-          <a
+          <Link
             href={blog.link}
             key={blog.id}
             className="group relative bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
@@ -64,7 +63,9 @@ const Blogs = () => {
             onMouseLeave={() => setHovered(null)}
           >
             <div className="relative h-56 w-full overflow-hidden">
-              <img
+              <Image
+                height={224}
+                width={400}
                 src={blog.image}
                 alt={blog.title}
                 className={`object-cover w-full h-full transition-transform duration-500 ${
@@ -99,7 +100,7 @@ const Blogs = () => {
             >
               Read More →
             </Link>
-          </a>
+          </Link>
         ))}
       </div>
       <style jsx global>{`
