@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Img1 from "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg";
+import { blogsData } from "@/assets/data/blogsData";
 
 const blogs = [
   {
@@ -56,41 +57,41 @@ const Blogs = () => {
       </div>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-        {blogs.map((blog, idx) => (
+        {blogsData?.map((blog, idx) => (
           <div
             key={blog.id}
             className="group relative bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
             style={{ animationDelay: `${idx * 0.1 + 0.2}s` }}
-            onMouseEnter={() => setHovered(blog.id)}
+            onMouseEnter={() => setHovered(blog?.id)}
             onMouseLeave={() => setHovered(null)}
           >
             <div className="relative h-56 w-full overflow-hidden">
               <Image
                 height={224}
                 width={400}
-                src={blog.image}
-                alt={blog.title}
+                src={blog?.image}
+                alt={blog?.title}
                 className={`object-cover w-full h-full transition-transform duration-500 ${
-                  hovered === blog.id ? "scale-110" : "scale-100"
+                  hovered === blog?.id ? "scale-110" : "scale-100"
                 }`}
                 loading="lazy"
               />
               <span className="absolute top-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow animate-fade-in-down">
-                {blog.date}
+                {blog?.date}
               </span>
             </div>
             <div className="p-6 flex flex-col h-48">
               <h2 className="text-xl font-bold text-blue-700 mb-2 group-hover:text-purple-700 transition-colors duration-300">
-                {blog.title}
+                {blog?.title}
               </h2>
-              <p className="text-gray-600 mb-4 line-clamp-3">{blog.desc}</p>
+              <p className="text-gray-600 mb-4 line-clamp-3">{blog?.desc}</p>
               <div className="flex flex-wrap gap-2 mt-auto">
-                {blog.tags.map((tag) => (
+                {blog?.tags?.map((tag) => (
                   <span
                     key={tag}
                     className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium"
                   >
-                    #{tag}
+                    {tag}
                   </span>
                 ))}
               </div>
