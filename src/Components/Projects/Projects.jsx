@@ -110,9 +110,21 @@ const Projects = () => {
           <div className="flex justify-center mt-8">
             <button
               onClick={handleShowMore}
-              className="px-6 py-3 bg-green-700 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition"
+              className="px-6 py-3 bg-green-700 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition flex items-center gap-2"
             >
               More Projects
+              <span className="transition-transform duration-300 group-hover:translate-y-1">
+                <svg
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
             </button>
           </div>
         )}
