@@ -52,26 +52,64 @@ const ProjectDetails = () => {
                 href={project?.liveProject}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition font-semibold"
+                className="group px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
               >
                 Live Site
+                <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                  <svg
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
               </Link>
               <Link
                 href={project?.clientCode}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition font-semibold"
+                className="group px-4 py-2 bg-gradient-to-r from-gray-900 to-indigo-700 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:bg-gray-900 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
               >
                 GitHub (Client)
+                <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                  <svg
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
               </Link>
-              <Link
-                href={project?.serverCode}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition font-semibold"
-              >
-                GitHub (Server)
-              </Link>
+              {project?.serverCode && (
+                <Link
+                  href={project?.serverCode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group px-4 py-2 bg-gradient-to-r from-indigo-900 to-black text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:bg-gray-900 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
+                >
+                  GitHub (Server)
+                  <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </Link>
+              )}
             </div>
           </div>
           <div className="flex flex-wrap gap-2 mb-4">
