@@ -59,7 +59,7 @@ const BlogDetails = () => {
           <span className="text-sm text-gray-500">{blog?.date}</span>
         </div>
         <div
-          className="prose max-w-none text-gray-800 animate-fade-in-up"
+          className="prose max-w-none text-justify text-gray-800 animate-fade-in-up"
           dangerouslySetInnerHTML={{ __html: blog?.content }}
         />
       </div>

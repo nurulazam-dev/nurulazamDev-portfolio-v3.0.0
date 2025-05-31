@@ -56,7 +56,7 @@ const Blogs = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
         {blogsData?.map((blog, idx) => (
           <div
             key={blog.id}
@@ -76,15 +76,17 @@ const Blogs = () => {
                 }`}
                 loading="lazy"
               />
-              <span className="absolute top-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow animate-fade-in-down">
+              <span className="absolute top-4 left-4 bg-purple-600 text-white text-xs px-3 py-1 rounded-full shadow animate-fade-in-down">
                 {blog?.date}
               </span>
             </div>
-            <div className="p-6 flex flex-col h-48">
-              <h2 className="text-xl font-bold text-blue-700 mb-2 group-hover:text-purple-700 transition-colors duration-300">
+            <div className="px-6 py-3 flex flex-col h-48">
+              <h2 className="text-[1.12rem] font-bold text-blue-700 mb-1 group-hover:text-purple-700 transition-colors duration-300">
                 {blog?.title}
               </h2>
-              <p className="text-gray-600 mb-4 line-clamp-3">{blog?.desc}</p>
+              <p className="text-gray-600 mb-4 text-[0.88rem] line-clamp-3">
+                {blog?.desc}
+              </p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {blog?.tags?.map((tag) => (
                   <span
