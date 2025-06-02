@@ -5,8 +5,14 @@ import Image from "next/image";
 const images = [
   { src: Img1, alt: "Award Ceremony 2023" },
   { src: Img1, alt: "Blood Donation Event" },
+  { src: Img1, alt: "Annual Event" },
+  { src: Img1, alt: "Blood Campain" },
   { src: Img1, alt: "Volunteering at Community Center" },
   { src: Img1, alt: "Achievement Award" },
+  { src: Img1, alt: "Achievement 2024" },
+  { src: Img1, alt: "Best Award 2025" },
+  { src: Img1, alt: "Blood Award" },
+  { src: Img1, alt: "Donate Award" },
 ];
 
 const Gallery = () => {
