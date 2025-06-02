@@ -9,6 +9,7 @@ import Blogs from "@/Components/Blogs/Blogs";
 import Projects from "@/Components/Projects/Projects";
 import Achievement from "@/Components/Home/Achievement";
 import SocialActivity from "@/Components/Home/SocialActivity";
+import Gallery from "@/Components/Gallery/Gallery";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Projects />
       <Achievement />
       <SocialActivity />
+      <Gallery />
       <Blogs />
       <Contact />
     </main>
