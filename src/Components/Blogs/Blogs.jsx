@@ -42,7 +42,7 @@ const Blogs = () => {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className="container mx-auto py-16 px-4">
+    <section className="container mx-auto py-10 px-4">
       <div className="text-center mb-12">
         <h4 className="uppercase text-blue-600 font-semibold tracking-widest mb-2 animate-fade-in-down">
           Latest Blogs

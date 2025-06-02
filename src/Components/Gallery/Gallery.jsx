@@ -53,7 +53,7 @@ const Gallery = () => {
       : groupedImages[activeTab];
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-blue-100 via-white to-purple-100 min-h-screen flex flex-col items-center">
+    <section className="py-10 px-4 bg-gradient-to-br from-blue-100 via-white to-purple-100 min-h-screen flex flex-col items-center">
       <h2 className="text-5xl font-extrabold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 animate-gradient-x">
         Gallery
       </h2>

@@ -8,6 +8,7 @@ export const blogsData = [
     id: "blog001",
     image: blogImg1,
     date: "July 2022",
+    author: "mnaoffcialbd",
     slug: "staying-relevant-learning-new-technologies-without-burning-out",
     tags: [
       "continuouslearning",
@@ -28,8 +29,8 @@ export const blogsData = [
           how you can learn new technologies at a healthy, sustainable pace.
         </p>
         <br />
-        <h2 className="font-semibold mb-2">
-          1. Accept That You Can’t Know Everything
+        <h2 class="font-bold mb-2">
+          1. Accept That You Can’t Know Everything:
         </h2>
         <p>
           The tech landscape is vast and ever-changing. Trying to master every
@@ -41,7 +42,7 @@ export const blogsData = [
           permission to not be an expert in every new technology.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">2. Set Clear Learning Goals</h3>
+        <h2 class="font-bold mb-2">2. Set Clear Learning Goals</h3>
         <p>
           Don’t learn something just because it’s popular. Ask yourself: “Will
           this help me in my current job or future goals?” Setting clear
@@ -52,7 +53,7 @@ export const blogsData = [
           trend.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">3. Learn by Building</h3>
+        <h2 class="font-bold mb-2">3. Learn by Building</h3>
         <p>
           Reading documentation and watching tutorials is helpful, but real
           understanding comes from building projects. Start small—a to-do app, a
@@ -63,7 +64,7 @@ export const blogsData = [
           motivation.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">
+        <h2 class="font-bold mb-2">
           4. Curate Your Information Sources
         </h3>
         <p>
@@ -75,7 +76,7 @@ export const blogsData = [
           review your sources and remove those that no longer add value.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">5. Take Breaks and Rest</h3>
+        <h2 class="font-bold mb-2">5. Take Breaks and Rest</h3>
         <p>
           Burnout often hides behind motivation. Remember to schedule downtime.
           Step away from the screen, go for a walk, or pursue a hobby. A rested
@@ -85,7 +86,7 @@ export const blogsData = [
           regular pauses.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">6. Join Communities</h3>
+        <h2 class="font-bold mb-2">6. Join Communities</h3>
         <p>
           Learning is easier with support. Join developer communities, attend
           meetups, or participate in online forums. Sharing experiences and
@@ -95,7 +96,7 @@ export const blogsData = [
           contribute your own insights—you’ll learn even more by helping others.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">7. Embrace the Learning Cycle</h3>
+        <h2 class="font-bold mb-2">7. Embrace the Learning Cycle</h3>
         <p>
           Some days you’ll feel sharp, other days foggy. That’s normal. Track
           your progress monthly, not daily, and celebrate small wins along the
@@ -105,7 +106,7 @@ export const blogsData = [
           consistency will pay off.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">Final Thoughts</h3>
+        <h2 class="font-bold mb-2">Final Thoughts</h3>
         <p>
           The tech industry rewards curiosity, not exhaustion. You don’t need to
           run at full speed—just keep moving forward. Learn with intention, rest
@@ -120,12 +121,13 @@ export const blogsData = [
     id: "blog002",
     image: blogImg2,
     date: "July 2022",
+    author: "nurulazam-dev",
     slug: "why-soft-skills-matter-more-than-you-think-in-web-development",
     tags: [
-      "#softskills",
-      "#webdevelopment",
-      "#communication",
-      "#careeradvancement",
+      "softskills",
+      "webdevelopment",
+      "communication",
+      "careeradvancement",
     ],
     title: "Why Soft Skills Matter More Than You Think in Web Development",
     desc: "Soft skills like communication & teamwork are just as crucial as coding. Here's why they matter.",
@@ -139,7 +141,7 @@ export const blogsData = [
           time.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">1. Communication is Key</h3>
+        <h2 class="font-bold mb-2">1. Communication is Key</h3>
         <p>
           Web development isn’t done in a vacuum. You’ll be explaining technical
           decisions to non-technical stakeholders, writing documentation for
@@ -149,7 +151,7 @@ export const blogsData = [
           projects, and builds trust within your team.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">2. Teamwork Makes the Dream Work</h3>
+        <h2 class="font-bold mb-2">2. Teamwork Makes the Dream Work</h3>
         <p>
           Whether you work in a startup or a large company, you’ll be part of a
           team. Soft skills like empathy, active listening, and compromise are
@@ -159,7 +161,7 @@ export const blogsData = [
           environment.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">
+        <h2 class="font-bold mb-2">
           3. Time Management and Prioritization
         </h3>
         <p>
@@ -170,7 +172,7 @@ export const blogsData = [
           on schedule and maintain a healthy work-life balance.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">4. Problem Solving Beyond Code</h3>
+        <h2 class="font-bold mb-2">4. Problem Solving Beyond Code</h3>
         <p>
           Not all problems are technical. You’ll face misaligned expectations,
           scope creep, and conflicting ideas from stakeholders. Being able to
@@ -179,7 +181,7 @@ export const blogsData = [
           solutions, and keep projects moving forward.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">5. Adaptability & Growth Mindset</h3>
+        <h2 class="font-bold mb-2">5. Adaptability & Growth Mindset</h3>
         <p>
           Tech evolves rapidly. The best developers stay flexible, open to
           feedback, and willing to learn from mistakes. Soft skills like
@@ -188,7 +190,7 @@ export const blogsData = [
           motivated in your career.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">
+        <h2 class="font-bold mb-2">
           6. Leadership (Even Without a Title)
         </h3>
         <p>
@@ -199,15 +201,15 @@ export const blogsData = [
           they don’t have a formal title.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">How to Improve Soft Skills</h3>
-        <ul className="list-disc pl-6 mb-4">
+        <h2 class="font-bold mb-2">How to Improve Soft Skills</h3>
+        <ul class="list-disc pl-6 mb-5">
           <li>Join code review sessions and ask for feedback</li>
           <li>Practice explaining technical concepts simply</li>
           <li>Work on group projects (open source or team hacks)</li>
           <li>Take notes on how senior devs handle meetings</li>
           <li>Read books on communication and emotional intelligence</li>
         </ul>
-        <h3 className="font-semibold mb-2">Final Thoughts</h3>
+        <h2 class="font-bold mb-2">Final Thoughts</h3>
         <p>
           Mastering frameworks and languages will get you through the door. But
           soft skills are what keep you inside—and help you grow. In web
@@ -222,6 +224,7 @@ export const blogsData = [
     id: "blog003",
     image: blogImg3,
     date: "July 2022",
+    author: "MNA Web Programming",
     slug: "from-imposter-syndrome-to-confidence",
     tags: [
       "#impostersyndrome",
@@ -241,7 +244,7 @@ export const blogsData = [
           experienced developers can feel like they’re just “faking it.”
         </p>
         <br />
-        <h3 className="font-semibold mb-2">Recognizing Imposter Syndrome</h3>
+        <h2 class="font-bold mb-2">Recognizing Imposter Syndrome</h3>
         <p>
           Imposter syndrome often starts when you compare yourself to others.
           You see polished portfolios, impressive GitHub profiles, or colleagues
@@ -252,7 +255,7 @@ export const blogsData = [
           abilities.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">Why It Happens</h3>
+        <h2 class="font-bold mb-2">Why It Happens</h3>
         <p>
           Tech is a fast-moving industry. New tools, frameworks, and best
           practices emerge constantly. No one knows everything—not even the most
@@ -262,7 +265,7 @@ export const blogsData = [
           solving problems, and learning from mistakes.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">Building Real Confidence</h3>
+        <h2 class="font-bold mb-2">Building Real Confidence</h3>
         <p>
           Start by tracking your progress. Keep a journal of what you’ve
           learned, bugs you’ve fixed, and features you’ve built. Celebrate small
@@ -275,7 +278,7 @@ export const blogsData = [
           is a cornerstone of growth in tech.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">Embracing Failure and Growth</h3>
+        <h2 class="font-bold mb-2">Embracing Failure and Growth</h3>
         <p>
           Every bug, error, or failed deployment is an opportunity to learn.
           Senior developers aren’t those who never make mistakes; they’re the
@@ -283,7 +286,7 @@ export const blogsData = [
           mindset: view challenges as opportunities, not threats.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">Find Your Community</h3>
+        <h2 class="font-bold mb-2">Find Your Community</h3>
         <p>
           Surround yourself with supportive peers and mentors. Join developer
           communities, attend meetups, or participate in online forums. You’ll
@@ -291,7 +294,7 @@ export const blogsData = [
           experiences can be both comforting and inspiring.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">Final Thoughts</h3>
+        <h2 class="font-bold mb-2">Final Thoughts</h3>
         <p>
           Your journey is unique. Don’t measure your progress against others.
           Focus on your own growth, stay curious, and keep building. Confidence
@@ -308,44 +311,41 @@ export const blogsData = [
     id: "blog004",
     image: blogImg4,
     date: "July 2022",
+    author: "Mohammad Nurul Azam",
     slug: "the-power-of-consistency-daily-coding-habits",
-    tags: ["#dailycodinghabits", "#developerproductivity", "#codingcareertips"],
+    tags: ["dailycodinghabits", "developerproductivity", "codingcareertips"],
     title: "How Daily Coding Habits Transform Your Career",
     desc: "Unlock your developer potential by building daily coding habits that fuel long-term career growth.",
     content: `
-<p>In the fast-paced world of software development, the difference between good and great often lies in one thing: <strong>consistency</strong>. While talent and tools are important, it's the <strong>habit of coding daily</strong>&mdash;even in small bursts&mdash;that sharpens your mind, grows your skills, and transforms your career over time.</p>
+<p>In the fast-paced world of software development, the difference between good and great often lies in one thing: <strong>consistency</strong>. While talent and tools are important, it's the <strong>habit of coding daily</strong>&mdash;even in small bursts&mdash;that sharpens your mind, grows your skills, and transforms your career over time.</p> <br />
 <p>Think of a professional athlete. They don’t just train when they feel motivated—they train <strong>every single day</strong>. As a developer, your "training" is coding, learning new patterns, debugging problems, or simply reading documentation. The power of daily practice, no matter how small, compounds in incredible ways.</p>
 <br />
-<h3>Why Daily Coding Matters</h3>
-<p>Consistency builds <strong>muscle memory</strong>. When you code every day, your brain starts to internalize patterns. You remember syntax more quickly, understand logic more deeply, and write cleaner, more efficient code without overthinking. Like a language, coding becomes more fluent with regular use.</p>
+<h2 class="font-bold mb-2">Why Daily Coding Matters</h2>
+<p class="mb-2">Consistency builds <strong>muscle memory</strong>. When you code every day, your brain starts to internalize patterns. You remember syntax more quickly, understand logic more deeply, and write cleaner, more efficient code without overthinking. Like a language, coding becomes more fluent with regular use.</p>
 <p>More importantly, daily coding keeps you <strong>close to the craft</strong>. When you're solving problems regularly, you're more in tune with how real-world systems behave, and you're constantly reinforcing what you know. Over time, this leads to fewer forgotten concepts and faster learning of new ones.</p>
 <br />
-<h3>Small Steps, Big Impact</h3>
+<h2 class="font-bold mb-2">Small Steps, Big Impact</h2>
 <p>You don’t need to build a full app every day. A single hour of focused coding, solving a problem on LeetCode, contributing to a GitHub repo, or even reviewing your own past code is enough. These small efforts may seem trivial in the moment, but together they form a foundation of <strong>incremental improvement</strong>.</p>
 <blockquote>
-  <p>James Clear, in his book <em>Atomic Habits</em>, says:<br>
+  <p>James Clear, in his book <em>Atomic Habits</em>, says:
   "You do not rise to the level of your goals. You fall to the level of your systems."</p>
 </blockquote>
-<p>Your system? Daily coding.<br>
+<p>Your system? Daily coding.
 Your result? Long-term mastery.</p>
 <br />
-<h3>Real Career Transformations</h3>
+<h2 class="font-bold mb-2">Real Career Transformations</h2>
 <p>Many developers have shared how committing to daily coding for just 30 minutes a day changed their careers—helping them land better jobs, become more confident, and even launch their own products. It's not about grinding 12 hours a day; it's about showing up <strong>every day</strong>, even when it’s tough.</p>
 <br />
-<h3>How to Build the Habit</h3>
-<ol>
+<h2 class="font-bold mb-2">How to Build the Habit</h2>
+<ol class="list-disc pl-6 mb-5">
   <li><strong>Set a minimum daily goal</strong> – Even 20 minutes is fine. Just start.</li>
   <li><strong>Track your progress</strong> – Use a habit tracker or a GitHub contribution graph.</li>
   <li><strong>Remove friction</strong> – Keep your coding environment ready to go.</li>
   <li><strong>Reflect weekly</strong> – What did you learn? What can you improve?</li>
   <li><strong>Celebrate progress</strong> – Consistency is a win in itself.</li>
 </ol>
-<br />
-<h3>Final Thoughts</h3>
-<p>The truth is, motivation fades. But discipline—and more importantly, <strong>systems built around consistency</strong>—last. Whether you're a student, junior developer, or even a senior engineer, daily coding can push you ahead of the curve.</p>
-<p>So start today. Write a function. Fix a bug. Read a tech blog.<br>
-Do it again tomorrow. And the next day.</p>
-<p>Your future self—the experienced, confident, sought-after developer—will thank you.</p>
+<h2 class="font-bold mb-2">Final Thoughts</h2>
+<p>The truth is, motivation fades. But discipline—and more importantly, <strong>systems built around consistency</strong>—last. Whether you're a student, junior developer, or even a senior engineer, daily coding can push you ahead of the curve. So start today. Write a function. Fix a bug. Read a tech blog. Do it again tomorrow. And the next day. Your future self—the experienced, confident, sought-after developer—will thank you.</p>
 `,
   },
 ];

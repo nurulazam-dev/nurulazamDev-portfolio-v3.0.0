@@ -53,15 +53,14 @@ const BlogDetails = () => {
   }
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-100 py-10 px-2 font-sans">
-      {/* Decorative background shapes */}
+    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-100 py-5 px-2 font-sans">
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full opacity-20 blur-2xl -z-10 animate-float" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-200 rounded-full opacity-20 blur-2xl -z-10 animate-float2" />
 
-      <div className="max-w-5xl mx-auto bg-white/90 rounded-3xl shadow-2xl p-8 md:p-14 animate-fade-in-up">
+      <div className="max-w-5xl mx-auto bg-white/90 rounded-3xl shadow-2xl p-8 md:p-10 animate-fade-in-up">
         <Link
           href="/blogs"
-          className="text-blue-600 hover:underline mb-6 inline-flex items-center gap-2 font-semibold transition hover:-translate-x-1"
+          className="bg-gradient-to-r from-blue-600 to-purple-500 text-white text-xs px-4 py-2 rounded-full shadow-lg opacity-90 font-semibold tracking-wide animate-pulse mb-2 inline-flex items-center transition hover:-translate-x-1 "
         >
           <svg
             width="22"
@@ -76,7 +75,7 @@ const BlogDetails = () => {
           Back to Blogs
         </Link>
         <div className="mb-8">
-          <div className="relative flex justify-center">
+          <div className="flex justify-center">
             <Image
               src={blog?.image}
               alt={blog?.title}
@@ -85,9 +84,6 @@ const BlogDetails = () => {
               className="object-cover rounded-2xl shadow-xl border-4 border-blue-100 animate-zoom-in"
               priority
             />
-            <span className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-purple-500 text-white text-xs px-4 py-1 rounded-full shadow-lg opacity-90 font-semibold tracking-wide animate-pulse">
-              {blog?.category || "Blog"}
-            </span>
           </div>
           <h1 className="text-4xl font-extrabold mb-3 mt-8 text-blue-800 animate-fade-in-down leading-tight font-display">
             {blog?.title}
@@ -138,7 +134,7 @@ const BlogDetails = () => {
           </div>
         </div>
         <div
-          className="prose max-w-none text-justify text-gray-700 animate-fade-in-up prose-img:rounded-xl prose-img:shadow-lg prose-h2:text-blue-700 prose-h3:text-blue-600 font-serif"
+          className="prose max-w-none text-justify text-gray-600 animate-fade-in-up prose-img:rounded-xl prose-img:shadow-lg prose-h2:text-blue-700 prose-h3:text-blue-600 font-serif"
           style={{ fontFamily: "'Merriweather', 'Georgia', serif" }}
           dangerouslySetInnerHTML={{ __html: blog?.content }}
         />
