@@ -10,11 +10,11 @@ export const blogsData = [
     date: "July 2022",
     slug: "staying-relevant-learning-new-technologies-without-burning-out",
     tags: [
-      "#continuouslearning",
-      "#webdevtrends",
-      "#techburnout",
-      "#devmindset",
-      "#learnsmart",
+      "continuouslearning",
+      "webdevtrends",
+      "techburnout",
+      "devmindset",
+      "learnsmart",
     ],
     title: "Staying Relevant: Learning New Technologies Without Burning Out",
     desc: "Stay sharp as a dev without burnout—practical ways to learn modern tech at a healthy pace.",
@@ -28,9 +28,9 @@ export const blogsData = [
           how you can learn new technologies at a healthy, sustainable pace.
         </p>
         <br />
-        <h3 className="font-semibold mb-2">
+        <h2 className="font-semibold mb-2">
           1. Accept That You Can’t Know Everything
-        </h3>
+        </h2>
         <p>
           The tech landscape is vast and ever-changing. Trying to master every
           new tool is a recipe for stress and frustration. Instead, focus on

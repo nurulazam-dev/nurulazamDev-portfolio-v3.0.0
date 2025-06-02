@@ -51,14 +51,14 @@ const Hero = () => {
           </p>
           <div className="flex gap-4 mt-2 animate-fade-in-up">
             <Link href="/contact">
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 animate-bounce-slow">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                 Hire Me
               </button>
             </Link>
             <a
               href="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
               download="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
-              className="px-6 py-3 bg-white border border-blue-600 text-blue-700 font-bold rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1 hover:scale-105 animate-bounce-slow "
+              className="px-6 py-3 bg-white border border-blue-600 text-blue-700 font-bold rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1 hover:scale-105 "
               rel="noopener noreferrer"
             >
               Download Resume
@@ -106,9 +106,6 @@ const Hero = () => {
             opacity: 1;
             transform: translateY(0);
           }
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 2.2s infinite;
         }
         @keyframes fade-in-left {
           0% {
