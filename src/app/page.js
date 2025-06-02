@@ -8,6 +8,7 @@ import Resume from "@/Components/Home/Resume";
 import Blogs from "@/Components/Blogs/Blogs";
 import Projects from "@/Components/Projects/Projects";
 import Achievement from "@/Components/Home/Achievement";
+import SocialActivity from "@/Components/Home/SocialActivity";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Resume />
       <Projects />
       <Achievement />
+      <SocialActivity />
       <Blogs />
       <Contact />
     </main>
