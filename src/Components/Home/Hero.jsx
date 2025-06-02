@@ -55,14 +55,14 @@ const Hero = () => {
                 Hire Me
               </button>
             </Link>
-            <a
+            <Link
               href="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
               download="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
               className="px-6 py-3 bg-white border border-blue-600 text-blue-700 font-bold rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1 hover:scale-105 "
               rel="noopener noreferrer"
             >
               Download Resume
-            </a>
+            </Link>
           </div>
         </div>
         {/* ======================

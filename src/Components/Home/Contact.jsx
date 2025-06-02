@@ -10,6 +10,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 init("ZQ_e_v_FCvn2tWGZZ");
 
 const Contact = () => {
@@ -91,38 +92,38 @@ const Contact = () => {
               </span>
             </div>
             <div className="flex justify-center gap-4 ">
-              <a
+              <Link
                 href="https://www.facebook.com/nurulazam.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="socialIcon group transition"
               >
                 <FaFacebookF className="text-blue-600 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.instagram.com/nurulazam_dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="socialIcon group transition"
               >
                 <FaInstagram className="text-pink-500 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/in/nurulazam-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="socialIcon group transition"
               >
                 <FaLinkedinIn className="text-blue-700 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://twitter.com/nurulazam_dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="socialIcon group transition"
               >
                 <FaTwitter className="text-blue-400 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
-              </a>
+              </Link>
             </div>
           </div>
           {/* Contact Form */}
