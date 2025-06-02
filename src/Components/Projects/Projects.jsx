@@ -108,9 +108,28 @@ const Projects = () => {
         {/* More Project Button */}
         {visibleCount < filteredProjects.length && (
           <div className="flex justify-center mt-8">
-            <button
+            {/* <button
               onClick={handleShowMore}
               className="px-6 py-3 bg-green-700 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition flex items-center gap-2"
+            >
+              More Projects
+              <span className="transition-transform duration-300 group-hover:translate-y-1">
+                <svg
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </button> */}
+            <button
+              onClick={handleShowMore}
+              className="px-8 py-3 bg-gradient-to-r from-blue-700 to-purple-600 text-white font-semibold rounded-full shadow-xl hover:scale-105 hover:from-blue-800 hover:to-purple-700 transition text-lg animate-bounce-slow flex items-center gap-2"
+              type="button"
             >
               More Projects
               <span className="transition-transform duration-300 group-hover:translate-y-1">
@@ -150,6 +169,9 @@ const Projects = () => {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 2.2s infinite;
         }
         .animate-fade-in-down {
           animation: fade-in-down 0.7s both;

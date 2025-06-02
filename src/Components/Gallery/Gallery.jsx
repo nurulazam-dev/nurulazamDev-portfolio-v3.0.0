@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Img1 from "../../assets/images/Blogs_banner/learn_react.jpeg";
+import Image from "next/image";
 
 const groupedImages = {
   Highlights: [
@@ -52,23 +53,23 @@ const Gallery = () => {
       : groupedImages[activeTab];
 
   return (
-    <section className="py-12 px-4 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-800">
+    <section className="py-16 px-4 bg-gradient-to-br from-blue-100 via-white to-purple-100 min-h-screen flex flex-col items-center">
+      <h2 className="text-5xl font-extrabold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 animate-gradient-x">
         Gallery
       </h2>
-      <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+      <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto text-lg animate-fade-in-down delay-100">
         Explore highlights from my social activities and achievements. Click any
         image to view it larger.
       </p>
       {/* Tabs */}
-      <div className="flex justify-center gap-2 mb-8 flex-wrap">
+      <div className="flex justify-center gap-3 mb-12 flex-wrap">
         {tabOrder.map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2 rounded-full font-semibold transition ${
+            className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-md border-2 ${
               activeTab === tab
-                ? "bg-blue-700 text-white shadow"
-                : "bg-white text-blue-700 border border-blue-200 hover:bg-blue-100"
+                ? "bg-gradient-to-r from-blue-700 to-purple-600 text-white border-blue-700 scale-105"
+                : "bg-white text-blue-700 border-blue-200 hover:bg-blue-100 hover:scale-105"
             }`}
             onClick={() => {
               setActiveTab(tab);
@@ -81,40 +82,69 @@ const Gallery = () => {
         ))}
       </div>
       {/* Gallery Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 animate-fade-in-up">
         {displayImages.map((img, idx) => (
           <button
             key={idx}
-            className="overflow-hidden rounded-lg shadow hover:scale-105 transition focus:outline-none"
+            className="relative group overflow-hidden rounded-2xl shadow-2xl bg-white transform transition-all duration-500 hover:scale-105 hover:shadow-3xl focus:outline-none"
             onClick={() => setSelected({ tab: activeTab, idx })}
             aria-label={`View ${img.alt}`}
             type="button"
+            style={{
+              animationDelay: `${idx * 0.07 + 0.1}s`,
+              animationName: "fadeInUp",
+              animationDuration: "0.7s",
+              animationFillMode: "both",
+            }}
           >
-            <img
+            <Image
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              className="object-cover w-full h-48"
+              className="object-cover w-full h-56 transition-transform duration-500 group-hover:scale-110 group-hover:blur-[2px]"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4">
+              <div className="text-white text-lg font-bold drop-shadow mb-1">
+                {img.alt}
+              </div>
+              <div className="text-white text-xs opacity-80">
+                Click to enlarge
+              </div>
+            </div>
+            <span className="absolute top-3 right-3 bg-gradient-to-r from-blue-600 to-purple-500 text-white text-xs px-3 py-1 rounded-full shadow-lg opacity-80 group-hover:scale-110 transition-transform duration-300 animate-pulse">
+              {activeTab}
+            </span>
           </button>
         ))}
       </div>
       {/* See More Button */}
       {activeTab === "Highlights" && !showAll && highlightImages.length > 6 && (
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-10">
           <button
-            className="px-6 py-2 bg-blue-700 text-white font-semibold rounded-full shadow hover:bg-blue-800 transition"
+            className="px-8 py-3 bg-gradient-to-r from-blue-700 to-purple-600 text-white font-semibold rounded-full shadow-xl hover:scale-105 hover:from-blue-800 hover:to-purple-700 transition text-lg animate-bounce-slow flex items-center gap-2"
             onClick={() => setShowAll(true)}
             type="button"
           >
             See More
+            <span className="transition-transform duration-300 group-hover:translate-y-1">
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </span>
           </button>
         </div>
       )}
       {/* Lightbox Modal */}
       {selected !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fade-in"
           onClick={() => setSelected(null)}
         >
           <div
@@ -129,12 +159,13 @@ const Gallery = () => {
             >
               &times;
             </button>
-            <img
+            <Image
+              loading="lazy"
               src={groupedImages[selected.tab][selected.idx].src}
               alt={groupedImages[selected.tab][selected.idx].alt}
-              className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg"
+              className="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl animate-zoom-in"
             />
-            <div className="text-center text-white mt-4 text-lg">
+            <div className="text-center text-white mt-4 text-2xl font-semibold drop-shadow">
               {groupedImages[selected.tab][selected.idx].alt}
             </div>
             {/* Navigation */}
@@ -169,6 +200,85 @@ const Gallery = () => {
           </div>
         </div>
       )}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 1s both;
+        }
+        @keyframes fade-in-down {
+          0% {
+            opacity: 0;
+            transform: translateY(-30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-down {
+          animation: fade-in-down 0.8s both;
+        }
+        @keyframes gradient-x {
+          0%,
+          100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 4s ease-in-out infinite;
+        }
+        @keyframes bounce-slow {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 2.2s infinite;
+        }
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.5s both;
+        }
+        @keyframes zoom-in {
+          0% {
+            transform: scale(0.8);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        .animate-zoom-in {
+          animation: zoom-in 0.5s both;
+        }
+        .hover\\:shadow-3xl:hover {
+          box-shadow: 0 10px 40px 0 rgba(80, 80, 200, 0.18),
+            0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        }
+      `}</style>
     </section>
   );
 };
