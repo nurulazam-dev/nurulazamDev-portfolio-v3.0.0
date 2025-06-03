@@ -10,21 +10,28 @@ import Projects from "@/Components/Projects/Projects";
 import Achievement from "@/Components/Home/Achievement";
 import SocialActivity from "@/Components/Home/SocialActivity";
 import Gallery from "@/Components/Gallery/Gallery";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
-  const [showScroll, setShowScroll] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScroll(window.scrollY > 300);
+      setAtTop(window.scrollY < 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleScrollButton = () => {
+    if (atTop) {
+      // Scroll to bottom (Contact section)
+      contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -39,15 +46,31 @@ export default function Home() {
       <SocialActivity />
       <Gallery />
       <Blogs />
-      <Contact />
+      {/* Attach ref to Contact section */}
+      <div ref={contactRef}>
+        <Contact />
+      </div>
 
-      {/* Scroll to Top Button */}
-      {showScroll && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-blue-700 to-purple-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
-          aria-label="Scroll to top"
-        >
+      {/* Scroll Button */}
+      <button
+        onClick={handleScrollButton}
+        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-blue-700 to-purple-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
+        aria-label={atTop ? "Scroll to bottom" : "Scroll to top"}
+      >
+        {atTop ? (
+          // Down arrow
+          <svg
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        ) : (
+          // Up arrow
           <svg
             width="28"
             height="28"
@@ -58,8 +81,8 @@ export default function Home() {
           >
             <path d="M5 15l7-7 7 7" />
           </svg>
-        </button>
-      )}
+        )}
+      </button>
     </main>
   );
 }
