@@ -10,6 +10,7 @@ import Projects from "@/Components/Projects/Projects";
 import Achievement from "@/Components/Home/Achievement";
 import SocialActivity from "@/Components/Home/SocialActivity";
 import Gallery from "@/Components/Gallery/Gallery";
+import Testimonial from "@/Components/Home/Testimonial";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Achievement />
       <SocialActivity />
       <Gallery />
+      <Testimonial />
       <Blogs />
       <Contact />
     </main>
