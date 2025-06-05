@@ -320,20 +320,23 @@ export const serviceData = [
   {
     id: "service001",
     image: serviceImg1,
-    title: "Front-End",
-    desc: "React, ES6, React Router Dom, CSS3, Tailwind CSS",
+    title: "Frontend",
+    desc: "Pixel-perfect UI with React, Next.js, Tailwind, and animations for interactive user experiences.",
+    // desc: "React, ES6, React Router Dom, CSS3, Tailwind CSS",
   },
   {
     id: "service002",
     image: serviceImg2,
-    title: "Back-End",
-    desc: "Express.JS, MongoDB, NodeJS, JWT, Mongoose",
+    title: "Backend",
+    desc: "Powerful APIs & databases using Node.js, Express, MongoDB for secure, scalable apps.",
+    // desc: "Express.JS, MongoDB, NodeJS, JWT, Mongoose",
   },
   {
     id: "service003",
     image: serviceImg3,
-    title: "Full-Stack",
-    desc: "Full-Stack MERN Web",
+    title: "Full Stack",
+    // desc: "Full-Stack MERN Web",
+    desc: "Seamless end-to-end applications from UI to server logic and data integration.",
   },
 ];
 

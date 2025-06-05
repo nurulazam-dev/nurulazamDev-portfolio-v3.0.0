@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/Components/Shared/Header";
 import Footer from "@/Components/Shared/Footer";
-// import DisableInspect from "@/Components/Shared/DisableInspect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <DisableInspect /> */}
         <Header />
         <main className="mt-8 md:mt-10 lg:mt-15">
           <div className="mx-auto">{children}</div>
