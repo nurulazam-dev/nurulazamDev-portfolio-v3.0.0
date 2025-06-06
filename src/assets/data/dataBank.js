@@ -340,6 +340,45 @@ export const serviceData = [
   },
 ];
 
+// Testimonials_Data
+export const testimonialsData = [
+  {
+    name: "Sarah Lee",
+    role: "Product Manager, TechNova",
+    image: serviceImg1,
+    quote:
+      "Working with Nurul Azam was a game-changer. The website exceeded our expectations in both design and performance. Highly recommended!",
+  },
+  {
+    name: "James Carter",
+    role: "Founder, StartupX",
+    image: serviceImg2,
+    quote:
+      "Professional, creative, and always on time. The solutions delivered helped us scale our business rapidly.",
+  },
+  {
+    name: "Alicia Gomez",
+    role: "Lead Designer, Creatify",
+    image: serviceImg3,
+    quote:
+      "Nurul’s attention to detail and passion for quality shine through in every project. A pleasure to collaborate with!",
+  },
+  {
+    name: "Michael Tan",
+    role: "CTO, FinEdge",
+    image: serviceImg1,
+    quote:
+      "The best developer I’ve worked with. Communication was clear, and the results were outstanding.",
+  },
+  {
+    name: "Emily Chen",
+    role: "CEO, Brandify",
+    image: serviceImg2,
+    quote:
+      "Nurul brought our vision to life with creativity and technical excellence. Highly recommended!",
+  },
+];
+
 // InfiniteScroll_Data
 export const scrollData = [
   {

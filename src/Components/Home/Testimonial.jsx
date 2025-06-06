@@ -1,44 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
-const testimonials = [
-  {
-    name: "Sarah Lee",
-    role: "Product Manager, TechNova",
-    image: "/images/testimonial1.jpg",
-    quote:
-      "Working with Nurul Azam was a game-changer. The website exceeded our expectations in both design and performance. Highly recommended!",
-  },
-  {
-    name: "James Carter",
-    role: "Founder, StartupX",
-    image: "/images/testimonial2.jpg",
-    quote:
-      "Professional, creative, and always on time. The solutions delivered helped us scale our business rapidly.",
-  },
-  {
-    name: "Alicia Gomez",
-    role: "Lead Designer, Creatify",
-    image: "/images/testimonial3.jpg",
-    quote:
-      "Nurul’s attention to detail and passion for quality shine through in every project. A pleasure to collaborate with!",
-  },
-  {
-    name: "Michael Tan",
-    role: "CTO, FinEdge",
-    image: "/images/testimonial4.jpg",
-    quote:
-      "The best developer I’ve worked with. Communication was clear, and the results were outstanding.",
-  },
-  {
-    name: "Emily Chen",
-    role: "CEO, Brandify",
-    image: "/images/testimonial5.jpg",
-    quote:
-      "Nurul brought our vision to life with creativity and technical excellence. Highly recommended!",
-  },
-];
+import { testimonialsData } from "@/assets/data/dataBank";
 
 const getVisibleSlides = (active, total, perView) => {
   // Returns an array of indices for visible slides
@@ -69,7 +32,7 @@ const Testimonial = () => {
   // Auto-slide logic
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
-      setActive((prev) => (prev + 1) % testimonials.length);
+      setActive((prev) => (prev + 1) % testimonialsData?.length);
     }, 4000);
     return () => clearTimeout(timeoutRef.current);
   }, [active, perView]);
@@ -80,7 +43,11 @@ const Testimonial = () => {
     clearTimeout(timeoutRef.current);
   };
 
-  const visibleSlides = getVisibleSlides(active, testimonials.length, perView);
+  const visibleSlides = getVisibleSlides(
+    active,
+    testimonialsData.length,
+    perView
+  );
 
   return (
     <section className="relative py-12 bg-gradient-to-br from-blue-50 via-purple-50 to-white overflow-hidden">
@@ -118,22 +85,22 @@ const Testimonial = () => {
               <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-tr from-blue-100 via-purple-100 to-white rounded-full blur-xl opacity-80 z-0"></div>
               <div className="relative z-10 mb-4">
                 <Image
-                  src={testimonials[idx].image}
-                  alt={testimonials[idx].name}
+                  src={testimonialsData[idx].image}
+                  alt={testimonialsData[idx].name}
                   width={72}
                   height={72}
                   className="rounded-full border-4 border-white shadow-lg object-cover"
                 />
               </div>
               <blockquote className="text-gray-500 italic mb-4 relative z-10">
-                “{testimonials[idx].quote}”
+                “{testimonialsData[idx].quote}”
               </blockquote>
               <div className="relative z-10">
                 <span className="block font-bold text-purple-700">
-                  {testimonials[idx].name}
+                  {testimonialsData[idx].name}
                 </span>
                 <span className="block text-xs text-blue-700">
-                  {testimonials[idx].role}
+                  {testimonialsData[idx].role}
                 </span>
               </div>
               <div className="absolute bottom-4 right-6 text-5xl text-blue-100 opacity-40 select-none pointer-events-none">
@@ -150,7 +117,7 @@ const Testimonial = () => {
         </div>
         {/* Dots navigation */}
         <div className="flex justify-center gap-3 mt-8">
-          {testimonials.map((_, idx) => (
+          {testimonialsData.map((_, idx) => (
             <button
               key={idx}
               onClick={() => goTo(idx)}
