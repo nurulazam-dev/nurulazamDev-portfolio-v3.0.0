@@ -1,7 +1,7 @@
-import blogImg3 from "../images/Blogs_banner/different_web_&_software_developer.jpg";
-import blogImg2 from "../images/Blogs_banner/dimand_web_development.jpeg";
-import blogImg1 from "../images/Blogs_banner/learn_react.jpeg";
-import blogImg4 from "../images/Blogs_banner/mobile_app_vs_web_dev.jpeg";
+import blogImg3 from "../images/Blogs_banner/from-imposter-syndrome-to-confidence.png";
+import blogImg2 from "../images/Blogs_banner/why-soft-skills-matter-more-than-you-think-in-web-development.png";
+import blogImg1 from "../images/Blogs_banner/staying-relevant-learning-new-technologies-without-burning-out.png";
+import blogImg4 from "../images/Blogs_banner/the-power-of-consistency-daily-coding-habits.png";
 
 export const blogsData = [
   {

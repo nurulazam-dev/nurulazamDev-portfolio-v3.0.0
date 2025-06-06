@@ -76,7 +76,7 @@ const Blogs = () => {
                 }`}
                 loading="lazy"
               />
-              <span className="absolute top-4 left-4 bg-purple-600 text-white text-xs px-3 py-1 rounded-full shadow animate-fade-in-down">
+              <span className="absolute bottom-4 right-4 bg-purple-600 text-white text-xs px-3 py-1 rounded-full shadow animate-fade-in-down">
                 {blog?.date}
               </span>
             </div>
