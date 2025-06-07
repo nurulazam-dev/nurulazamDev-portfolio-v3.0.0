@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { projectsData } from "@/assets/data/dataBank";
+import { projectsData } from "@/assets/data/projectsData";
 
 const categories = [
   { label: "All", value: "all" },
