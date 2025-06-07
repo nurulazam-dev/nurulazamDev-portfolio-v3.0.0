@@ -2,6 +2,8 @@
 import React from "react";
 import Link from "next/link";
 import swal from "sweetalert";
+import Image from "next/image";
+import brandLogo from "../../assets/images/logo/nurulazan-dev-logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +11,14 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 items-start">
         {/* Brand & About */}
         <div className="flex flex-col items-center md:items-start col-span-1">
-          <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 tracking-tight mb-2 animate-footer-logo">
-            Nurul Azam
-          </span>
+          <Image
+            src={brandLogo}
+            alt="M N A"
+            width={160}
+            height={56}
+            priority
+            className="animate-footer-logo"
+          />
           <p className="text-gray-600 text-sm max-w-xs mb-2 text-center md:text-left">
             MERN Stack Developer passionate about building modern, scalable, and
             user-friendly web applications.
