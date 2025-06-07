@@ -33,58 +33,6 @@ This is the repository for the latest version of the personal portfolio website 
 
 ---
 
-## 📁 Project Structure
-
-```bash
-app
-├── api
-│   ├── auth
-│   │   ├── [...nextauth]
-│   │   └── route.js
-│   ├── contact
-│   │   └── route.js
-│   └── hello
-│       └── route.js
-├── components
-│   ├── About
-│   │   └── index.js
-│   ├── Contact
-│   │   └── index.js
-│   ├── Footer
-│   │   └── index.js
-│   ├── Gallery
-│   │   └── index.js
-│   ├── Header
-│   │   └── index.js
-│   ├── Hero
-│   │   └── index.js
-│   ├── Loader
-│   │   └── index.js
-│   ├── NotFound
-│   │   └── index.js
-│   ├── Projects
-│   │   └── index.js
-│   └── Testimonials
-│       └── index.js
-├── dashboard
-│   ├── layout.js
-│   ├── loading.js
-│   ├── page.js
-│   └── register
-│       └── page.js
-├── gallery
-│   ├── layout.js
-│   └── page.js
-├── globals.css
-├── layout.js
-├── loading.js
-├── not-found.js
-├── page.js
-└── resume.pdf
-```
-
----
-
 ## 📚 Installation & Setup
 
 1. Clone the repository
