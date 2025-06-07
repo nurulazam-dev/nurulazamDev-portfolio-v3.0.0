@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import brandLogo from "../../assets/images/logo/nurulazan-dev-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -23,10 +25,13 @@ const Header = () => {
         {/* ======================
                  Logo
         ====================== */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-600 tracking-tight group-hover:drop-shadow-lg transition">
-            Nurul Azam
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src={brandLogo}
+            alt="M N A"
+            loading="lazy"
+            className="w-full h-9 object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
         {/* ======================
                  Hamburger

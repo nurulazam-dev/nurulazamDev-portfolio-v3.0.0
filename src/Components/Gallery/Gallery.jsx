@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Img1 from "../../assets/images/Blogs_banner/learn_react.jpeg";
+import Img1 from "../../assets/images/Blogs_banner/why-soft-skills-matter-more-than-you-think-in-web-development.png";
 import Image from "next/image";
 
 const groupedImages = {

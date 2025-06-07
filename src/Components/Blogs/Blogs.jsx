@@ -2,41 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Img1 from "../../assets/images/Blogs_banner/different_web_&_software_developer.jpg";
 import { blogsData } from "@/assets/data/blogsData";
-
-const blogs = [
-  {
-    id: 1,
-    slug: "mastering-react-tips-tricks",
-    title: "Mastering React: Tips & Tricks",
-    image: Img1,
-    date: "May 2025",
-    desc: "Discover advanced React techniques and best practices to build scalable web apps.",
-    tags: ["React", "Frontend", "Tips"],
-    link: "#",
-  },
-  {
-    id: 2,
-    slug: "web-development-trends-2025",
-    title: "Web Development Trends 2025",
-    image: Img1,
-    date: "April 2025",
-    desc: "Stay ahead with the latest trends and technologies shaping the web development landscape.",
-    tags: ["Web", "Trends", "Tech"],
-    link: "#",
-  },
-  {
-    id: 3,
-    slug: "difference-web-vs-software-developer",
-    title: "Difference: Web vs. Software Developer",
-    image: Img1,
-    date: "March 2025",
-    desc: "Understand the key differences between web and software development roles.",
-    tags: ["Career", "Web", "Software"],
-    link: "#",
-  },
-];
 
 const Blogs = () => {
   const [hovered, setHovered] = useState(null);
