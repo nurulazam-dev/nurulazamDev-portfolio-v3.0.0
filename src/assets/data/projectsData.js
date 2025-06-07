@@ -1,9 +1,9 @@
-import project1Img from "../images/projects/1-Projects_Thumbnail/1-mna-computer-manufacture.png";
-import project3Img from "../images/projects/1-Projects_Thumbnail/3-mna-events-ltd.png";
-import project4Img from "../images/projects/1-Projects_Thumbnail/4-wind-travels.png";
-import project5Img from "../images/projects/1-Projects_Thumbnail/5-mna-munna-photographer.png";
-import project6Img from "../images/projects/1-Projects_Thumbnail/6-mna-bike-bazar.png";
-import project7Img from "../images/projects/1-Projects_Thumbnail/7-panda-eCommerce.png";
+import project1Img from "../images/projects/1-mna-computer-manufacture.png";
+import project3Img from "../images/projects/3-mna-events-ltd.png";
+import project4Img from "../images/projects/4-wind-travels.png";
+import project5Img from "../images/projects/5-mna-munna-photographer.png";
+import project6Img from "../images/projects/6-mna-bike-bazar.png";
+import project7Img from "../images/projects/7-panda-eCommerce.png";
 
 export const projectsData = [
   {

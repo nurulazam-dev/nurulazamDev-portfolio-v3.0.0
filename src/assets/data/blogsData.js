@@ -1,7 +1,7 @@
-import blogImg3 from "../images/Blogs_banner/from-imposter-syndrome-to-confidence.png";
-import blogImg2 from "../images/Blogs_banner/why-soft-skills-matter-more-than-you-think-in-web-development.png";
 import blogImg1 from "../images/Blogs_banner/staying-relevant-learning-new-technologies-without-burning-out.png";
-import blogImg4 from "../images/Blogs_banner/the-power-of-consistency-daily-coding-habits.png";
+import blogImg2 from "../images/Blogs_banner/from-imposter-syndrome-to-confidence.png";
+import blogImg4 from "../images/Blogs_banner/why-soft-skills-matter-more-than-you-think-in-web-development.png";
+import blogImg3 from "../images/Blogs_banner/the-power-of-consistency-daily-coding-habits.png";
 
 export const blogsData = [
   {
@@ -121,6 +121,134 @@ export const blogsData = [
     id: "blog002",
     image: blogImg2,
     date: "July 2022",
+    author: "MNA Web Programming",
+    slug: "from-imposter-syndrome-to-confidence",
+    tags: [
+      "#impostersyndrome",
+      "#developerconfidence",
+      "#personalgrowth",
+      "#mindsetmatters",
+    ],
+    title: "From Imposter Syndrome to Confidence: A Web Developer’s Journey",
+    desc: "Overcome imposter syndrome and grow real confidence as a web developer—mindset is everything.",
+    content: `
+<div>
+        <p>
+          Every web developer, from beginner to senior, has faced moments of
+          self-doubt. That nagging feeling—“Am I really good enough?”—is called
+          imposter syndrome, and it’s more common in tech than you might think.
+          In a field that evolves rapidly and demands constant learning, even
+          experienced developers can feel like they’re just “faking it.”
+        </p>
+        <br />
+        <h2 class="font-bold mb-2">Recognizing Imposter Syndrome</h3>
+        <p>
+          Imposter syndrome often starts when you compare yourself to others.
+          You see polished portfolios, impressive GitHub profiles, or colleagues
+          who seem to solve problems effortlessly. Social media amplifies this,
+          making it easy to believe everyone else is smarter and more talented.
+          But the truth is, most developers struggle behind the scenes,
+          wrestling with bugs, learning new frameworks, and doubting their
+          abilities.
+        </p>
+        <br />
+        <h2 class="font-bold mb-2">Why It Happens</h3>
+        <p>
+          Tech is a fast-moving industry. New tools, frameworks, and best
+          practices emerge constantly. No one knows everything—not even the most
+          senior engineers. The pressure to keep up, combined with the
+          visibility of others’ achievements, can make you feel inadequate. But
+          confidence doesn’t come from knowing it all—it comes from showing up,
+          solving problems, and learning from mistakes.
+        </p>
+        <br />
+        <h2 class="font-bold mb-2">Building Real Confidence</h3>
+        <p>
+          Start by tracking your progress. Keep a journal of what you’ve
+          learned, bugs you’ve fixed, and features you’ve built. Celebrate small
+          victories, like fixing a tricky CSS issue or deploying your first app.
+          These wins add up and remind you how far you’ve come. Teaching what
+          you learn is another powerful strategy. Write blog posts, share tips
+          on social media, or explain concepts to a friend. Teaching reinforces
+          your knowledge and proves to yourself that you understand more than
+          you think. Don’t be afraid to ask questions or seek help—collaboration
+          is a cornerstone of growth in tech.
+        </p>
+        <br />
+        <h2 class="font-bold mb-2">Embracing Failure and Growth</h3>
+        <p>
+          Every bug, error, or failed deployment is an opportunity to learn.
+          Senior developers aren’t those who never make mistakes; they’re the
+          ones who’ve learned how to recover and grow from them. Adopt a growth
+          mindset: view challenges as opportunities, not threats.
+        </p>
+        <br />
+        <h2 class="font-bold mb-2">Find Your Community</h3>
+        <p>
+          Surround yourself with supportive peers and mentors. Join developer
+          communities, attend meetups, or participate in online forums. You’ll
+          quickly discover that everyone faces challenges, and sharing
+          experiences can be both comforting and inspiring.
+        </p>
+        <br />
+        <h2 class="font-bold mb-2">Final Thoughts</h3>
+        <p>
+          Your journey is unique. Don’t measure your progress against others.
+          Focus on your own growth, stay curious, and keep building. Confidence
+          will come—not from perfection, but from persistence and passion.
+          Imposter syndrome may never disappear completely, but with time,
+          effort, and the right mindset, it will fade. You are learning. You are
+          improving. You are already a developer. Keep going—your confidence
+          will grow with every line of code.
+        </p>
+      </div>
+`,
+  },
+  {
+    id: "blog003",
+    image: blogImg3,
+    date: "July 2022",
+    author: "Mohammad Nurul Azam",
+    slug: "the-power-of-consistency-daily-coding-habits",
+    tags: ["dailycodinghabits", "developerproductivity", "codingcareertips"],
+    title: "How Daily Coding Habits Transform Your Career",
+    desc: "Unlock your developer potential by building daily coding habits that fuel long-term career growth.",
+    content: `
+<p>In the fast-paced world of software development, the difference between good and great often lies in one thing: <strong>consistency</strong>. While talent and tools are important, it's the <strong>habit of coding daily</strong>&mdash;even in small bursts&mdash;that sharpens your mind, grows your skills, and transforms your career over time.</p> <br />
+<p>Think of a professional athlete. They don’t just train when they feel motivated—they train <strong>every single day</strong>. As a developer, your "training" is coding, learning new patterns, debugging problems, or simply reading documentation. The power of daily practice, no matter how small, compounds in incredible ways.</p>
+<br />
+<h2 class="font-bold mb-2">Why Daily Coding Matters</h2>
+<p class="mb-2">Consistency builds <strong>muscle memory</strong>. When you code every day, your brain starts to internalize patterns. You remember syntax more quickly, understand logic more deeply, and write cleaner, more efficient code without overthinking. Like a language, coding becomes more fluent with regular use.</p>
+<p>More importantly, daily coding keeps you <strong>close to the craft</strong>. When you're solving problems regularly, you're more in tune with how real-world systems behave, and you're constantly reinforcing what you know. Over time, this leads to fewer forgotten concepts and faster learning of new ones.</p>
+<br />
+<h2 class="font-bold mb-2">Small Steps, Big Impact</h2>
+<p>You don’t need to build a full app every day. A single hour of focused coding, solving a problem on LeetCode, contributing to a GitHub repo, or even reviewing your own past code is enough. These small efforts may seem trivial in the moment, but together they form a foundation of <strong>incremental improvement</strong>.</p>
+<blockquote>
+  <p>James Clear, in his book <em>Atomic Habits</em>, says:
+  "You do not rise to the level of your goals. You fall to the level of your systems."</p>
+</blockquote>
+<p>Your system? Daily coding.
+Your result? Long-term mastery.</p>
+<br />
+<h2 class="font-bold mb-2">Real Career Transformations</h2>
+<p>Many developers have shared how committing to daily coding for just 30 minutes a day changed their careers—helping them land better jobs, become more confident, and even launch their own products. It's not about grinding 12 hours a day; it's about showing up <strong>every day</strong>, even when it’s tough.</p>
+<br />
+<h2 class="font-bold mb-2">How to Build the Habit</h2>
+<ol class="list-disc pl-6 mb-5">
+  <li><strong>Set a minimum daily goal</strong> – Even 20 minutes is fine. Just start.</li>
+  <li><strong>Track your progress</strong> – Use a habit tracker or a GitHub contribution graph.</li>
+  <li><strong>Remove friction</strong> – Keep your coding environment ready to go.</li>
+  <li><strong>Reflect weekly</strong> – What did you learn? What can you improve?</li>
+  <li><strong>Celebrate progress</strong> – Consistency is a win in itself.</li>
+</ol>
+<h2 class="font-bold mb-2">Final Thoughts</h2>
+<p>The truth is, motivation fades. But discipline—and more importantly, <strong>systems built around consistency</strong>—last. Whether you're a student, junior developer, or even a senior engineer, daily coding can push you ahead of the curve. So start today. Write a function. Fix a bug. Read a tech blog. Do it again tomorrow. And the next day. Your future self—the experienced, confident, sought-after developer—will thank you.</p>
+`,
+  },
+  {
+    id: "blog004",
+    image: blogImg4,
+    date: "July 2022",
     author: "nurulazam-dev",
     slug: "why-soft-skills-matter-more-than-you-think-in-web-development",
     tags: [
@@ -218,134 +346,6 @@ export const blogsData = [
           Invest in both. That’s how you build a real career.
         </p>
       </div>
-`,
-  },
-  {
-    id: "blog003",
-    image: blogImg3,
-    date: "July 2022",
-    author: "MNA Web Programming",
-    slug: "from-imposter-syndrome-to-confidence",
-    tags: [
-      "#impostersyndrome",
-      "#developerconfidence",
-      "#personalgrowth",
-      "#mindsetmatters",
-    ],
-    title: "From Imposter Syndrome to Confidence: A Web Developer’s Journey",
-    desc: "Overcome imposter syndrome and grow real confidence as a web developer—mindset is everything.",
-    content: `
-<div>
-        <p>
-          Every web developer, from beginner to senior, has faced moments of
-          self-doubt. That nagging feeling—“Am I really good enough?”—is called
-          imposter syndrome, and it’s more common in tech than you might think.
-          In a field that evolves rapidly and demands constant learning, even
-          experienced developers can feel like they’re just “faking it.”
-        </p>
-        <br />
-        <h2 class="font-bold mb-2">Recognizing Imposter Syndrome</h3>
-        <p>
-          Imposter syndrome often starts when you compare yourself to others.
-          You see polished portfolios, impressive GitHub profiles, or colleagues
-          who seem to solve problems effortlessly. Social media amplifies this,
-          making it easy to believe everyone else is smarter and more talented.
-          But the truth is, most developers struggle behind the scenes,
-          wrestling with bugs, learning new frameworks, and doubting their
-          abilities.
-        </p>
-        <br />
-        <h2 class="font-bold mb-2">Why It Happens</h3>
-        <p>
-          Tech is a fast-moving industry. New tools, frameworks, and best
-          practices emerge constantly. No one knows everything—not even the most
-          senior engineers. The pressure to keep up, combined with the
-          visibility of others’ achievements, can make you feel inadequate. But
-          confidence doesn’t come from knowing it all—it comes from showing up,
-          solving problems, and learning from mistakes.
-        </p>
-        <br />
-        <h2 class="font-bold mb-2">Building Real Confidence</h3>
-        <p>
-          Start by tracking your progress. Keep a journal of what you’ve
-          learned, bugs you’ve fixed, and features you’ve built. Celebrate small
-          victories, like fixing a tricky CSS issue or deploying your first app.
-          These wins add up and remind you how far you’ve come. Teaching what
-          you learn is another powerful strategy. Write blog posts, share tips
-          on social media, or explain concepts to a friend. Teaching reinforces
-          your knowledge and proves to yourself that you understand more than
-          you think. Don’t be afraid to ask questions or seek help—collaboration
-          is a cornerstone of growth in tech.
-        </p>
-        <br />
-        <h2 class="font-bold mb-2">Embracing Failure and Growth</h3>
-        <p>
-          Every bug, error, or failed deployment is an opportunity to learn.
-          Senior developers aren’t those who never make mistakes; they’re the
-          ones who’ve learned how to recover and grow from them. Adopt a growth
-          mindset: view challenges as opportunities, not threats.
-        </p>
-        <br />
-        <h2 class="font-bold mb-2">Find Your Community</h3>
-        <p>
-          Surround yourself with supportive peers and mentors. Join developer
-          communities, attend meetups, or participate in online forums. You’ll
-          quickly discover that everyone faces challenges, and sharing
-          experiences can be both comforting and inspiring.
-        </p>
-        <br />
-        <h2 class="font-bold mb-2">Final Thoughts</h3>
-        <p>
-          Your journey is unique. Don’t measure your progress against others.
-          Focus on your own growth, stay curious, and keep building. Confidence
-          will come—not from perfection, but from persistence and passion.
-          Imposter syndrome may never disappear completely, but with time,
-          effort, and the right mindset, it will fade. You are learning. You are
-          improving. You are already a developer. Keep going—your confidence
-          will grow with every line of code.
-        </p>
-      </div>
-`,
-  },
-  {
-    id: "blog004",
-    image: blogImg4,
-    date: "July 2022",
-    author: "Mohammad Nurul Azam",
-    slug: "the-power-of-consistency-daily-coding-habits",
-    tags: ["dailycodinghabits", "developerproductivity", "codingcareertips"],
-    title: "How Daily Coding Habits Transform Your Career",
-    desc: "Unlock your developer potential by building daily coding habits that fuel long-term career growth.",
-    content: `
-<p>In the fast-paced world of software development, the difference between good and great often lies in one thing: <strong>consistency</strong>. While talent and tools are important, it's the <strong>habit of coding daily</strong>&mdash;even in small bursts&mdash;that sharpens your mind, grows your skills, and transforms your career over time.</p> <br />
-<p>Think of a professional athlete. They don’t just train when they feel motivated—they train <strong>every single day</strong>. As a developer, your "training" is coding, learning new patterns, debugging problems, or simply reading documentation. The power of daily practice, no matter how small, compounds in incredible ways.</p>
-<br />
-<h2 class="font-bold mb-2">Why Daily Coding Matters</h2>
-<p class="mb-2">Consistency builds <strong>muscle memory</strong>. When you code every day, your brain starts to internalize patterns. You remember syntax more quickly, understand logic more deeply, and write cleaner, more efficient code without overthinking. Like a language, coding becomes more fluent with regular use.</p>
-<p>More importantly, daily coding keeps you <strong>close to the craft</strong>. When you're solving problems regularly, you're more in tune with how real-world systems behave, and you're constantly reinforcing what you know. Over time, this leads to fewer forgotten concepts and faster learning of new ones.</p>
-<br />
-<h2 class="font-bold mb-2">Small Steps, Big Impact</h2>
-<p>You don’t need to build a full app every day. A single hour of focused coding, solving a problem on LeetCode, contributing to a GitHub repo, or even reviewing your own past code is enough. These small efforts may seem trivial in the moment, but together they form a foundation of <strong>incremental improvement</strong>.</p>
-<blockquote>
-  <p>James Clear, in his book <em>Atomic Habits</em>, says:
-  "You do not rise to the level of your goals. You fall to the level of your systems."</p>
-</blockquote>
-<p>Your system? Daily coding.
-Your result? Long-term mastery.</p>
-<br />
-<h2 class="font-bold mb-2">Real Career Transformations</h2>
-<p>Many developers have shared how committing to daily coding for just 30 minutes a day changed their careers—helping them land better jobs, become more confident, and even launch their own products. It's not about grinding 12 hours a day; it's about showing up <strong>every day</strong>, even when it’s tough.</p>
-<br />
-<h2 class="font-bold mb-2">How to Build the Habit</h2>
-<ol class="list-disc pl-6 mb-5">
-  <li><strong>Set a minimum daily goal</strong> – Even 20 minutes is fine. Just start.</li>
-  <li><strong>Track your progress</strong> – Use a habit tracker or a GitHub contribution graph.</li>
-  <li><strong>Remove friction</strong> – Keep your coding environment ready to go.</li>
-  <li><strong>Reflect weekly</strong> – What did you learn? What can you improve?</li>
-  <li><strong>Celebrate progress</strong> – Consistency is a win in itself.</li>
-</ol>
-<h2 class="font-bold mb-2">Final Thoughts</h2>
-<p>The truth is, motivation fades. But discipline—and more importantly, <strong>systems built around consistency</strong>—last. Whether you're a student, junior developer, or even a senior engineer, daily coding can push you ahead of the curve. So start today. Write a function. Fix a bug. Read a tech blog. Do it again tomorrow. And the next day. Your future self—the experienced, confident, sought-after developer—will thank you.</p>
 `,
   },
 ];
