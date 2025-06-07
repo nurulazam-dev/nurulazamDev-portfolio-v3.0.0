@@ -51,17 +51,45 @@ const Hero = () => {
           </p>
           <div className="flex gap-4 mt-2 animate-fade-in-up">
             <Link href="/contact">
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+              <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                {/* Hire Me Icon */}
+                <svg
+                  className="w-5 h-5 animate-bounce-right"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
                 Hire Me
               </button>
             </Link>
             <Link
               href="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
               download="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
-              className="px-6 py-3 bg-white border border-blue-600 text-blue-700 font-bold rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1 hover:scale-105 "
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-blue-600 text-blue-700 font-bold rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1 hover:scale-105 "
               rel="noopener noreferrer"
             >
               Download Resume
+              {/* Download Icon */}
+              <svg
+                className="w-5 h-5 animate-bounce-down"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"
+                />
+              </svg>
             </Link>
           </div>
         </div>
@@ -74,7 +102,7 @@ const Hero = () => {
             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-200 via-purple-200 to-transparent rounded-full blur-2xl opacity-70 z-0"></div>
             <Image
               src={HeroImg}
-              alt="nurulazam dev"
+              alt="Nurul Azam"
               className="relative z-10 rounded-2xl shadow-2xl border-4 border-white"
               height={400}
               width={400}
@@ -87,6 +115,28 @@ const Hero = () => {
                Animations
         ====================== */}
       <style jsx global>{`
+        .animate-bounce-right {
+          animation: bounce-right 1.2s infinite alternate;
+        }
+        @keyframes bounce-right {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(6px);
+          }
+        }
+        .animate-bounce-down {
+          animation: bounce-down 1.2s infinite alternate;
+        }
+        @keyframes bounce-down {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(6px);
+          }
+        }
         @keyframes fade-in-down {
           0% {
             opacity: 0;
