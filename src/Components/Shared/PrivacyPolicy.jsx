@@ -86,10 +86,10 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, please contact
             us at{" "}
             <Link
-              href="mailto:your@email.com"
+              href="mailto:nurulazam.dev@gmail.com"
               className="text-blue-700 underline"
             >
-              your@email.com
+              nurulazam.dev@gmail.com
             </Link>
             .
           </p>

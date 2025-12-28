@@ -77,8 +77,11 @@ const Terms = () => {
           <p>
             If you have any questions about these Terms of Service, please
             contact us at{" "}
-            <a href="mailto:your@email.com" className="text-blue-700 underline">
-              your@email.com
+            <a
+              href="mailto:nurulazam.dev@gmail.com"
+              className="text-blue-700 underline"
+            >
+              nurulazam.dev@gmail.com
             </a>
             .
           </p>

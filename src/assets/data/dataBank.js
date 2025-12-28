@@ -31,23 +31,31 @@ import vsCodeImg from "../images/programming-logo/vs-code.png";
 // Education_Data
 export const educationData = [
   {
-    id: 1,
+    id: "edu-1",
     org: "Programming Hero",
-    time: "(Jan 2022 - June 2022)",
-    title: "Web Development",
-    desc: "Complete the Web Development Course with Jhankar Mahabub. Expert: HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, ES6, React, React Router, DaisyUI, Google Firebase, MongoDB, Node.js, Express.js.",
+    time: "(Dec 2025 - June 2026)",
+    title: "Next Level Web Development",
+    desc: "Complete the Next Level Web Development Course with Programming Hero Level-2. Expert: TypeScript, Node, Express, Golang, Next.js, PostgreSQL, Prisma, Docker, Nginx, and AI.",
     rate: "Black Base",
   },
   {
-    id: 2,
+    id: "edu-2",
+    org: "Programming Hero",
+    time: "(Jan 2022 - June 2022)",
+    title: "Web Development",
+    desc: "Complete the Web Development Course with Jhankar Mahabub Level-1. Expert: HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, ES6, React, React Router, DaisyUI, Google Firebase, MongoDB, Node.js, and Express.js.",
+    rate: "Black Base",
+  },
+  {
+    id: "edu-3",
     org: "National University",
     time: "(Batch 2020-21)",
     title: "Bachelor of Business Studies",
-    desc: "I am a student of Raozan University College under the National University. I plan to pursue a Bachelor of Business Studies (B.B.S.) Degree.",
+    desc: "I completed my degree in the Department of Bachelor of Business Studies (B.B.S.) at Raozan University College under the National University.",
     rate: "2nd Class",
   },
   {
-    id: 3,
+    id: "edu-4",
     org: "Chittagong Board ",
     time: "(2018 - 2020)",
     title: "Higher Secondary Certificate",
