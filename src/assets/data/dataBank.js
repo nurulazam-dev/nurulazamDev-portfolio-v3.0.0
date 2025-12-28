@@ -41,10 +41,10 @@ export const educationData = [
   {
     id: 2,
     org: "National University",
-    time: "(2000 - Continue)",
+    time: "(Batch 2020-21)",
     title: "Bachelor of Business Studies",
     desc: "I am a student of Raozan University College under the National University. I plan to pursue a Bachelor of Business Studies (B.B.S.) Degree.",
-    rate: "Continue",
+    rate: "2nd Class",
   },
   {
     id: 3,
@@ -63,28 +63,28 @@ export const experienceData = [
     company: "The Editing Factory (India)",
     period: "(Oct 2022 - Dec 2022)",
     role: "Frontend React Developer (Intern)",
-    desc: "I am Internship on The_Editing_Factory (Hyderabad, Telangana, India) remotely as a Frontend React.js Developer from October 2022 to December 2022. I'm working on a Travel Agency project.",
+    desc: "I completed my internship at The Editing Factory (Hyderabad, Telangana, India) as a front-end React.js developer, working remotely from October 2022 to December 2022. I worked on a project for a travel agency in a front-end development role.",
   },
   {
     id: 2,
     company: "S.Y.A Electronics - Walton (Head Office)",
     period: "(Jun 2023 - Oct 2023)",
     role: "Assistant Manager",
-    desc: "I am working at SYA Electronics head office (Anderkilla, Chittagong) as an Assistant Manager from June 2023 to October 2023. SYA Electronics is a distributor of Walton in Chittagong Zone.",
+    desc: "I worked at SYA Electronics's head office (Anderkilla, Chittagong) as an assistant manager from June 2023 to October 2023. SYA Electronics is a distributor of Walton in the Chittagong Zone.",
   },
   {
     id: 3,
-    company: "Mna24BD, MNA Web Programming, Tech Tuber Boss",
+    company: "Mna24BD, MNA Web Programming",
     period: "(2018 - Present)",
     role: "Content Creator",
-    desc: "I am working on Mna24BD, MNA Web Programming, and Tech Tuber Boss Youtube Channel as a content creator. Mna24Bd is an Islamic channel, MNA Web Programming is a web programming channel and Tech Tuber Boss is a tech and educational channel.",
+    desc: "I am working on Mna24BD and MNA Web Programming YouTube channels as a content creator. Mna24Bd is an Islamic channel; MNA Web Programming is a web programming and educational channel.",
   },
   {
     id: 4,
     company: "Knowledge Teaching Home",
     period: "(2015 - 2020)",
     role: "Director & Teacher",
-    desc: "Knowledge Teaching Home is a Coaching center. Which provides tech to many Schools and Madrasha's students from class Six (06) to class Ten (10).",
+    desc: "Knowledge Teaching Home is a coaching center. Which provides tech to many schools and madrasha's students from class six (06) to class ten (10).",
   },
 ];
 
