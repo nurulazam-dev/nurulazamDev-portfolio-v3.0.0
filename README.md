@@ -8,7 +8,7 @@ This is the repository for the latest version of the personal portfolio website 
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/nurulazamDev/portfolio-v2.1.0.git
+   git clone https://github.com/nurulazam-dev/nurulazamDev-portfolio-v3.0.0.git
    cd portfolio-v2.1.0
    ```
 2. Install dependencies
@@ -36,9 +36,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Mohammad Nurul Azam**
 
 - [Portfolio](https://nurulazamdev.vercel.app/)
-- [LinkedIn](https://www.linkedin.com/in/mohammadnurulazam/)
-- [GitHub](https://github.com/nurulazamDev)
-- [Twitter](https://twitter.com/nurulazamdev)
+- [LinkedIn](https://www.linkedin.com/in/nurulazam-dev/)
+- [GitHub](https://github.com/nurulazam-dev)
+- [Twitter](https://twitter.com/nurulazam-dev)
 
 ---
 
@@ -50,7 +50,7 @@ Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) fo
 
 ## 🐛 Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/nurulazamDev/portfolio-v2.1.0/issues) to report bugs or request features.
+Please use the [issue tracker](https://github.com/nurulazam-dev/nurulazamDev-portfolio-v3.0.0/issues) to report bugs or request features.
 
 ---
 
