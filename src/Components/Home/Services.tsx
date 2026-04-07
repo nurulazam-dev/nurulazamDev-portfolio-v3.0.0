@@ -1,56 +1,103 @@
 "use client";
 import { skillsData } from "public/assets/data/dataBank";
 import Image from "next/image";
+import Link from "next/link";
+import SectionHeader from "../Shared/SectionHeader";
+
+const serviceContent: Record<
+  string,
+  { subtitle: string; points: string[]; accent: string }
+> = {
+  Frontend: {
+    subtitle:
+      "I craft responsive, modern, and high-performing interfaces with clean UX and motion.",
+    points: [
+      "Pixel-perfect UI with reusable components",
+      "Responsive design for mobile, tablet, and desktop",
+      "Smooth interactions with Framer Motion",
+    ],
+    accent: "from-sky-500 to-blue-600",
+  },
+  Backend: {
+    subtitle:
+      "I build secure APIs and scalable server architecture for real-world production systems.",
+    points: [
+      "REST APIs with authentication and role-based access",
+      "Data modeling with Prisma, PostgreSQL, and MongoDB",
+      "Validation, business logic, and performance-focused design",
+    ],
+    accent: "from-blue-500 to-sky-600",
+  },
+  Tools: {
+    subtitle:
+      "I use modern tooling and workflow best practices for quality, speed, and maintainability.",
+    points: [
+      "Version control, CI-ready project structure, and deployment flow",
+      "Cloud, debugging, and API testing for stable releases",
+      "Efficient collaboration with modern dev tools",
+    ],
+    accent: "from-sky-500 to-blue-600",
+  },
+};
 
 const Services = () => {
   return (
-    <section className="relative z-10 py-12 px-4 sm:px-8 lg:px-16 bg-white text-gray-900">
-      <div className="text-center mb-8 max-w-3xl mx-auto">
-        <h4 className="text-base uppercase tracking-widest text-blue-600 mb-2 animate-fade-in-down">
-          Core Skill Categories
-        </h4>
-        <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-fade-in-down">
-          Tech Stack I Work With
-        </h1>
-        <p className="text-gray-600 mt-4 text-base animate-fade-in-up">
-          Frontend, backend, and toolchain capabilities that power my modern
-          full-stack workflow. I use these technologies to deliver scalable,
-          maintainable, and high-performance applications.
-        </p>
-      </div>
+    <section className="relative z-10 from-white px-4 py-14 sm:px-8 lg:px-16">
+      <SectionHeader subtitle="My Services" title="What I Can Build For You" />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto animate-fade-in-up">
+      <div className="mx-auto grid max-w-7xl gap-7 animate-fade-in-up md:grid-cols-2 lg:grid-cols-3">
         {skillsData.map((group, index) => (
           <div
             key={group.id}
-            className="relative group px-6 py-3 rounded-xl border border-gray-200 backdrop-blur-md shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-xl hover:border-blue-500 animate-fade-in-down"
+            className="group relative rounded-2xl border border-gray-200 p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl  animate-fade-in-down"
             style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
           >
-            <div className="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none z-0"></div>
-
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="w-40 h-34 flex items-center justify-center  group-hover:scale-110 transition-transform duration-300">
+            <div className="relative z-10 flex h-full flex-col">
+              <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-2xl border border-slate-200 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={group.image}
                   alt={group.title}
-                  width={160}
-                  height={160}
+                  width={92}
+                  height={92}
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {group.title}
+              <h3 className="mb-2 text-xl font-bold">
+                {group.title} Development
               </h3>
-              <div className="flex flex-wrap justify-center gap-2">
-                {group.skillsData.map((skill) => (
+              <p className="mb-4 text-sm text-gray-600">
+                {serviceContent[group.title]?.subtitle}
+              </p>
+
+              <ul className="mb-4 space-y-2">
+                {serviceContent[group.title]?.points.map((point) => (
+                  <li
+                    key={point}
+                    className="flex items-start gap-2 text-sm text-slate-700"
+                  >
+                    <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-sky-700" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mb-5 flex flex-wrap gap-2">
+                {group.skillsData.slice(0, 6).map((skill) => (
                   <span
                     key={skill.name}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-700"
+                    className="rounded-full border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-700"
                   >
                     {skill.name}
                   </span>
                 ))}
               </div>
+
+              <Link
+                href="/contact"
+                className={`mt-auto inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r px-4 py-2.5 text-sm font-semibold text-white shadow transition-opacity hover:opacity-95 ${serviceContent[group.title]?.accent ?? "from-cyan-500 to-indigo-600"}`}
+              >
+                Discuss This Service
+              </Link>
             </div>
           </div>
         ))}

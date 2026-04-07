@@ -4,6 +4,13 @@ import Link from "next/link";
 import Typewriter from "typewriter-effect";
 // import { skillsData } from "public/assets/data/dataBank";
 import HeroImg from "public/assets/images/hero/mnaHeroImg.png";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -62,9 +69,57 @@ const Hero = () => {
                 </span>
               ))}
           </div> */}
-          <div className="flex gap-4 mt-2 animate-fade-in-up">
-            <Link href="/contact">
-              <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+          <div className="text-center mb-2">
+            <span className="text-base text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-600 font-bold tracking-wide">
+              CONNECT WITH ME
+            </span>
+          </div>
+          <div className="flex justify-center gap-4 mb-4 animate-fade-in-up">
+            <Link
+              href="https://www.linkedin.com/in/nurulazam-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="socialIcon group transition"
+            >
+              <FaLinkedin className="text-blue-700 text-3xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300 border rounded-md p-0.5" />
+            </Link>
+            <Link
+              href="https://www.github.com/nurulazam-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="socialIcon group transition"
+            >
+              <FaGithub className="text-gray-800 text-3xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300 border rounded-md p-0.5" />
+            </Link>
+            <Link
+              href="https://www.facebook.com/nurulazam.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="socialIcon group transition"
+            >
+              <FaFacebook className="text-blue-600 text-3xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300 border rounded-md p-0.5" />
+            </Link>
+            <Link
+              href="https://www.instagram.com/nurulazam_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="socialIcon group transition"
+            >
+              <FaInstagram className="text-pink-500 text-3xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300 border rounded-md p-0.5" />
+            </Link>
+
+            <Link
+              href="https://twitter.com/nurulazam_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="socialIcon group transition"
+            >
+              <FaTwitter className="text-blue-400 text-3xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300 border rounded-md p-0.5" />
+            </Link>
+          </div>
+          <div className="mt-2 flex w-full flex-col gap-3 animate-fade-in-up sm:w-auto sm:flex-row sm:gap-4">
+            <Link href="/contact" className="w-full sm:w-auto">
+              <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-600 px-5 py-3 text-sm font-bold text-white shadow-lg transition transform hover:-translate-y-1 hover:scale-105 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 sm:px-6 sm:text-base">
                 {/* Hire Me Icon */}
                 <svg
                   className="w-5 h-5 animate-bounce-right"
@@ -85,7 +140,7 @@ const Hero = () => {
             <Link
               href="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
               download="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
-              className="flex items-center gap-2 px-6 py-3 bg-white border border-blue-600 text-blue-700 font-bold rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1 hover:scale-105 "
+              className="flex w-full items-center justify-center gap-2 rounded-lg border border-blue-600 bg-white px-5 py-3 text-sm font-bold text-blue-700 shadow transition transform hover:-translate-y-1 hover:scale-105 hover:bg-blue-50 sm:w-auto sm:px-6 sm:text-base"
               rel="noopener noreferrer"
             >
               Download Resume

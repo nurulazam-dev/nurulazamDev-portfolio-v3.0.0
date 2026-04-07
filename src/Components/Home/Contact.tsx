@@ -6,6 +6,7 @@ import swal from "sweetalert";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import SectionHeader from "../Shared/SectionHeader";
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -46,14 +47,8 @@ const Contact = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center p-6">
       <main className="w-full bg-white/90 backdrop-blur rounded-xl shadow-xl p-10 animate-fade-in-up">
-        <div className="text-center mb-6">
-          <h4 className="uppercase text-blue-600 font-semibold tracking-widest mb-2 animate-fade-in-down">
-            Contact Me
-          </h4>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 animate-fade-in-down">
-            I Want To Hear From You
-          </h1>
-        </div>
+        <SectionHeader subtitle="Contact Me" title="I Want To Hear From You" />
+
         <div className="flex flex-col md:flex-row gap-12">
           {/* Contact Details */}
           <div className="md:w-2/5 w-full flex flex-col items-center justify-center animate-fade-in-left">

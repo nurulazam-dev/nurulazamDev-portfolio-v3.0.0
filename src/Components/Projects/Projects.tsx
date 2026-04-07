@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { projectsData, type Project } from "public/assets/data/projectsData";
+import SectionHeader from "../Shared/SectionHeader";
 
 type Category = {
   label: string;
@@ -31,7 +32,6 @@ const Projects: React.FC = () => {
           (project: Project) => project.category === selectedCategory,
         );
 
-  // Reset visibleCount when category changes
   React.useEffect(() => {
     setVisibleCount(INITIAL_PROJECTS);
   }, [selectedCategory]);
@@ -44,10 +44,8 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen px-6 sm:px-16 font-[family-name:var(--font-geist-sans)] flex flex-col items-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <main className="w-full max-w-6xl py-7">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-7 text-center text-gray-900 animate-fade-in-down">
-          My Projects
-        </h1>
+      <div className="w-full max-w-6xl py-7">
+        <SectionHeader subtitle="My Projects" title="Some of my recent work" />
         {/* ======================
             Category Filter part
           ====================== */}
@@ -136,7 +134,7 @@ const Projects: React.FC = () => {
             </button> */}
             <button
               onClick={handleShowMore}
-              className="px-8 py-3 bg-gradient-to-r from-blue-700 to-purple-600 text-white font-semibold rounded-full shadow-xl hover:scale-105 hover:from-blue-800 hover:to-purple-700 transition text-lg animate-bounce-slow flex items-center gap-2"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-semibold rounded-full shadow-xl hover:scale-105 hover:from-indigo-600 hover:to-cyan-500 transition text-lg animate-bounce-slow flex items-center gap-2"
               type="button"
             >
               More Projects
@@ -155,7 +153,7 @@ const Projects: React.FC = () => {
             </button>
           </div>
         )}
-      </main>
+      </div>
       {/* Animations */}
       <style jsx global>{`
         @keyframes fade-in-down {

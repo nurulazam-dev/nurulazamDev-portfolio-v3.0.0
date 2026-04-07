@@ -1,3 +1,5 @@
+import SectionHeader from "../Shared/SectionHeader";
+
 const activities = [
   {
     title: "Financial Secretary",
@@ -124,14 +126,11 @@ const activities = [
 const SocialActivity = () => {
   return (
     <section className="py-10 px-4 bg-gradient-to-br from-blue-50 via-white to-purple-50 flex flex-col items-center">
-      <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-800 mb-4 animate-fade-in-down tracking-tight">
-        Social Impact & Community Leadership
-      </h2>
-      <p className="text-lg text-center text-gray-600 mb-12 max-w-2xl animate-fade-in-down delay-100">
-        Beyond code, I believe in giving back. Here’s how I’ve contributed to
-        society—leading, organizing, and inspiring positive change in my
-        community.
-      </p>
+      <SectionHeader
+        title="Social Impact & Community Leadership"
+        subtitle="Beyond Code"
+      />
+
       <div className="flex flex-col sm:flex-row gap-7 w-full max-w-6xl justify-center items-stretch">
         {activities.map((a, idx) => (
           <div

@@ -2,24 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { blogsData, type Blog } from "public/assets/data/blogsData";
+import SectionHeader from "../Shared/SectionHeader";
 
 const Blogs: React.FC = () => {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
     <section className="container mx-auto py-10 px-4">
-      <div className="text-center mb-12">
-        <h4 className="uppercase text-blue-600 font-semibold tracking-widest mb-2 animate-fade-in-down">
-          Latest Blogs
-        </h4>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 animate-fade-in-down">
-          Insights & Articles
-        </h1>
-        <p className="text-gray-500 mt-2 max-w-xl mx-auto animate-fade-in-up">
-          Explore my latest articles on web development, programming, and tech
-          trends.
-        </p>
-      </div>
+      <SectionHeader subtitle="Latest Blogs" title="Insights & Articles" />
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
         {blogsData?.map((blog: Blog, idx: number) => (

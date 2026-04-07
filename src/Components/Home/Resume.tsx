@@ -1,17 +1,12 @@
 "use client";
 
 import { educationData, experienceData } from "public/assets/data/dataBank";
+import SectionHeader from "../Shared/SectionHeader";
 
 const Resume = () => (
   <section className="container mx-auto py-5 px-4">
-    <div className="text-center mb-10">
-      <h4 className="uppercase text-blue-600 font-semibold tracking-widest mb-2 animate-fade-in-down">
-        My Resume
-      </h4>
-      <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 animate-fade-in-down">
-        My Experiences and Educations
-      </h1>
-    </div>
+    <SectionHeader subtitle="My Resume" title="My Experiences and Educations" />
+
     <div className="grid md:grid-cols-2 gap-14">
       {/* Experience */}
       <section className="mb-10">

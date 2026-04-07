@@ -1,19 +1,14 @@
 "use client";
 import { skillsData } from "public/assets/data/dataBank";
 import Image from "next/image";
+import SectionHeader from "../Shared/SectionHeader";
 
 const Skills = () => {
   return (
     <section className="container mx-auto py-5 lg:mb-12 mb-8">
-      <div className="text-center mb-16">
-        <h4 className="uppercase text-blue-600 font-semibold tracking-widest mb-2 animate-fade-in-down">
-          Skills
-        </h4>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 animate-fade-in-down">
-          My Available Skills
-        </h1>
-      </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 px-5">
+      <SectionHeader subtitle="My Skills" title="What I Know" />
+
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 px-5 pt-5">
         {skillsData.map((skill, index) => (
           <div
             key={index}
