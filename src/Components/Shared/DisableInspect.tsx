@@ -3,10 +3,10 @@ import { useEffect } from "react";
 
 export default function DisableInspect() {
   useEffect(() => {
-    const handleContextMenu = (e) => e.preventDefault();
+    const handleContextMenu = (e: MouseEvent) => e.preventDefault();
     document.addEventListener("contextmenu", handleContextMenu);
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (
         e.key === "F12" ||
         (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C")) ||

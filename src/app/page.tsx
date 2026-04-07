@@ -12,9 +12,9 @@ import SocialActivity from "@/Components/Home/SocialActivity";
 import Gallery from "@/Components/Gallery/Gallery";
 import Testimonial from "@/Components/Home/Testimonial";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
       <Hero />
       <Services />
       <InfiniteScroll />
@@ -27,6 +27,6 @@ export default function Home() {
       <Testimonial />
       <Blogs />
       <Contact />
-    </main>
+    </div>
   );
 }

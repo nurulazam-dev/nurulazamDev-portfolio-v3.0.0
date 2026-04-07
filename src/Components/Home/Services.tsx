@@ -1,5 +1,5 @@
 "use client";
-import { serviceData } from "@/assets/data/dataBank";
+import { serviceData } from "public/assets/data/dataBank";
 import Image from "next/image";
 
 const Services = () => {

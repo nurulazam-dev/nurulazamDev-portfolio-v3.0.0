@@ -1,11 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { testimonialsData } from "@/assets/data/dataBank";
+import { testimonialsData } from "public/assets/data/dataBank";
 
-const getVisibleSlides = (active, total, perView) => {
-  // Returns an array of indices for visible slides
-  let slides = [];
+const getVisibleSlides = (
+  active: number,
+  total: number,
+  perView: number,
+): number[] => {
+  const slides: number[] = [];
   for (let i = 0; i < perView; i++) {
     slides.push((active + i) % total);
   }
@@ -13,9 +16,9 @@ const getVisibleSlides = (active, total, perView) => {
 };
 
 const Testimonial = () => {
-  const [active, setActive] = useState(0);
-  const [perView, setPerView] = useState(1);
-  const timeoutRef = useRef();
+  const [active, setActive] = useState<number>(0);
+  const [perView, setPerView] = useState<number>(1);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Responsive: 1 slide on mobile, 2 on md, 3 on lg+
   useEffect(() => {
@@ -34,19 +37,21 @@ const Testimonial = () => {
     timeoutRef.current = setTimeout(() => {
       setActive((prev) => (prev + 1) % testimonialsData?.length);
     }, 4000);
-    return () => clearTimeout(timeoutRef.current);
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, [active, perView]);
 
   // Manual navigation
-  const goTo = (idx) => {
+  const goTo = (idx: number) => {
     setActive(idx);
-    clearTimeout(timeoutRef.current);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
   };
 
   const visibleSlides = getVisibleSlides(
     active,
     testimonialsData.length,
-    perView
+    perView,
   );
 
   return (

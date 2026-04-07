@@ -3,7 +3,7 @@ import React from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { projectsData } from "@/assets/data/projectsData";
+import { projectsData } from "public/assets/data/projectsData";
 
 const ProjectDetails = () => {
   const params = useParams();
@@ -50,17 +50,17 @@ const ProjectDetails = () => {
         project?.category === "fullStack"
           ? "bg-gradient-to-r from-orange-500 to-yellow-400 text-white"
           : project?.category === "frontend"
-          ? "bg-gradient-to-r from-blue-500 to-purple-400 text-white"
-          : project?.category === "backend"
-          ? "bg-gradient-to-r from-gray-700 to-gray-900 text-white"
-          : "bg-gray-200 text-gray-700"
+            ? "bg-gradient-to-r from-blue-500 to-purple-400 text-white"
+            : project?.category === "backend"
+              ? "bg-gradient-to-r from-gray-700 to-gray-900 text-white"
+              : "bg-gray-200 text-gray-700"
       } animate-fade-in-down`}
             >
               {project?.category === "fullStack" && "Full Stack"}
               {project?.category === "frontend" && "Frontend"}
               {project?.category === "backend" && "Backend"}
               {!["fullStack", "frontend", "backend"].includes(
-                project?.category
+                project?.category,
               ) && project?.category}
             </span>
             <span className="px-3 py-1 rounded text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200 animate-fade-in-down">
@@ -75,46 +75,50 @@ const ProjectDetails = () => {
               <p className="text-gray-700">{project?.subTitle}</p>
             </div>
             <div className="flex gap-4">
-              <Link
-                href={project?.liveProject}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
-              >
-                Live Site
-                <span className="transform group-hover:translate-x-1 transition-transform duration-300">
-                  <svg
-                    width="18"
-                    height="18"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </span>
-              </Link>
-              <Link
-                href={project?.clientCode}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-4 py-2 bg-gradient-to-r from-gray-900 to-indigo-700 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:bg-gray-900 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
-              >
-                GitHub (Client)
-                <span className="transform group-hover:translate-x-1 transition-transform duration-300">
-                  <svg
-                    width="18"
-                    height="18"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </span>
-              </Link>
+              {project?.liveProject && (
+                <Link
+                  href={project.liveProject}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
+                >
+                  Live Site
+                  <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </Link>
+              )}
+              {project?.clientCode && (
+                <Link
+                  href={project.clientCode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group px-4 py-2 bg-gradient-to-r from-gray-900 to-indigo-700 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:bg-gray-900 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
+                >
+                  GitHub (Client)
+                  <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </Link>
+              )}
               {project?.serverCode && (
                 <Link
                   href={project?.serverCode}

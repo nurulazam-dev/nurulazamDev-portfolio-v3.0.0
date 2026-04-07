@@ -5,7 +5,25 @@ import project5Img from "../images/projects/5-mna-munna-photographer.png";
 import project6Img from "../images/projects/6-mna-bike-bazar.png";
 import project7Img from "../images/projects/7-panda-eCommerce.png";
 
-export const projectsData = [
+export type Project = {
+  id: string;
+  category: string;
+  projectType?: string;
+  projectColor: string;
+  title: string;
+  subTitle?: string;
+  des1: string;
+  des2: string;
+  des3: string;
+  technologies?: string[];
+  imageLink: any;
+  youtubeLink: string;
+  liveProject?: string;
+  clientCode?: string;
+  serverCode?: string;
+};
+
+export const projectsData: Project[] = [
   {
     id: "project01",
     category: "fullStack",

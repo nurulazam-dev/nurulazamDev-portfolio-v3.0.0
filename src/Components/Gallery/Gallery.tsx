@@ -38,11 +38,15 @@ const tabOrder = [
   "Blood Donation Drives",
   "Awards",
   "Community Events",
-];
+] as const;
+
+type Tab = (typeof tabOrder)[number];
 
 const Gallery = () => {
-  const [selected, setSelected] = useState(null);
-  const [activeTab, setActiveTab] = useState("Highlights");
+  const [selected, setSelected] = useState<{ tab: Tab; idx: number } | null>(
+    null,
+  );
+  const [activeTab, setActiveTab] = useState<Tab>("Highlights");
   const [showAll, setShowAll] = useState(false);
 
   // For Highlights, show only first 6 unless "See More" is clicked
@@ -275,7 +279,8 @@ const Gallery = () => {
           animation: zoom-in 0.5s both;
         }
         .hover\\:shadow-3xl:hover {
-          box-shadow: 0 10px 40px 0 rgba(80, 80, 200, 0.18),
+          box-shadow:
+            0 10px 40px 0 rgba(80, 80, 200, 0.18),
             0 2px 4px 0 rgba(0, 0, 0, 0.08);
         }
       `}</style>

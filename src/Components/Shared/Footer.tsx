@@ -167,7 +167,7 @@ const Footer = () => {
           <span className="font-semibold text-gray-700 mb-1">Newsletter</span>
           <form
             className="flex gap-2 w-full"
-            onSubmit={(e) => {
+            onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
               e.preventDefault();
               swal("Thank You!", "You are successfully subscribing me");
             }}

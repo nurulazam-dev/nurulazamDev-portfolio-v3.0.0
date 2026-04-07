@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
           </div>
           <div className="mb-4">
             <h2 className="font-bold">2. Information We Collect</h2>
-            <ul class="list-disc pl-6 mb-5">
+            <ul className="list-disc pl-6 mb-5">
               <li>
                 <strong>Personal Information:</strong> Such as your name, email
                 address, or contact details when you fill out forms or interact
@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
           </div>
           <div className="mb-4">
             <h2 className="font-bold">3. How We Use Your Information</h2>
-            <ul class="list-disc pl-6 mb-5">
+            <ul className="list-disc pl-6 mb-5">
               <li>To provide and maintain our services</li>
               <li>To improve user experience</li>
               <li>To communicate with you about updates or offers</li>

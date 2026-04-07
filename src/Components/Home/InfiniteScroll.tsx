@@ -1,5 +1,5 @@
 "use client";
-import { scrollData } from "@/assets/data/dataBank";
+import { scrollData } from "public/assets/data/dataBank";
 import Image from "next/image";
 
 const InfiniteScroll = () => {

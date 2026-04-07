@@ -1,11 +1,10 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { blogsData } from "@/assets/data/blogsData";
+import { blogsData, type Blog } from "public/assets/data/blogsData";
 
-const Blogs = () => {
-  const [hovered, setHovered] = useState(null);
+const Blogs: React.FC = () => {
+  const [hovered, setHovered] = useState<string | null>(null);
 
   return (
     <section className="container mx-auto py-10 px-4">
@@ -23,7 +22,7 @@ const Blogs = () => {
       </div>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
-        {blogsData?.map((blog, idx) => (
+        {blogsData?.map((blog: Blog, idx: number) => (
           <div
             key={blog.id}
             className="group relative bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
@@ -54,7 +53,7 @@ const Blogs = () => {
                 {blog?.desc}
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
-                {blog?.tags?.map((tag) => (
+                {blog?.tags?.map((tag: string) => (
                   <span
                     key={tag}
                     className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium"

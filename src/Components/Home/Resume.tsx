@@ -1,6 +1,6 @@
 "use client";
 
-import { educationData, experienceData } from "@/assets/data/dataBank";
+import { educationData, experienceData } from "public/assets/data/dataBank";
 
 const Resume = () => (
   <section className="container mx-auto py-5 px-4">

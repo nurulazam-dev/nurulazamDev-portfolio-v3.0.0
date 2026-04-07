@@ -19,7 +19,7 @@ const Terms = () => {
             services.
           </p>
           <h2 className="font-bold mt-4">2. Use of the Website</h2>
-          <ul class="list-disc pl-6 mb-5">
+          <ul className="list-disc pl-6 mb-5">
             <li>You must be at least 13 years old to use this website.</li>
             <li>
               You agree not to misuse the website or help anyone else do so.
@@ -36,7 +36,7 @@ const Terms = () => {
             copy, reproduce, or distribute any content without permission.
           </p>
           <h2 className="font-bold mt-4">4. User Content</h2>
-          <ul class="list-disc pl-6 mb-5">
+          <ul className="list-disc pl-6 mb-5">
             <li>
               You retain ownership of any content you submit, but grant us a
               license to use, display, and distribute it as part of the website.
@@ -47,7 +47,7 @@ const Terms = () => {
             </li>
           </ul>
           <h2 className="font-bold mt-4">5. Prohibited Activities</h2>
-          <ul class="list-disc pl-6 mb-5">
+          <ul className="list-disc pl-6 mb-5">
             <li>Do not upload malicious code, spam, or offensive content.</li>
             <li>
               Do not attempt to gain unauthorized access to the website or its

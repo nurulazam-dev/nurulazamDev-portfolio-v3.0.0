@@ -1,17 +1,11 @@
 "use client";
 
-import { init, sendForm } from "emailjs-com";
-import { useState } from "react";
+import { sendForm } from "@emailjs/browser";
+import { type ChangeEvent, type FormEvent, useState } from "react";
 import swal from "sweetalert";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-init("ZQ_e_v_FCvn2tWGZZ");
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -22,7 +16,9 @@ const Contact = () => {
     message: "",
   });
 
-  const InputEvent = (event) => {
+  const InputEvent = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = event.target;
     setData((preVal) => ({
       ...preVal,
@@ -30,18 +26,20 @@ const Contact = () => {
     }));
   };
 
-  const formSubmit = (event) => {
-    const form = document.querySelector("#contact-form");
+  const formSubmit = (event: FormEvent<HTMLFormElement>) => {
+    const form = document.querySelector(
+      "#contact-form",
+    ) as HTMLFormElement | null;
     event.preventDefault();
 
     sendForm("service_5xq9ask", "template_nzyc51k", "#contact-form").then(
-      (result) => {
+      () => {
         swal("Thank You!", "Your email was sent successfully", "success");
-        form.reset();
+        form?.reset();
       },
-      (error) => {
+      (error: any) => {
         swal("Sorry!", "Your email was not sent. Please try again.", "error");
-      }
+      },
     );
   };
 
@@ -98,7 +96,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="socialIcon group transition"
               >
-                <FaFacebookF className="text-blue-600 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
+                <FaFacebook className="text-blue-600 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
               </Link>
               <Link
                 href="https://www.instagram.com/nurulazam_dev"
@@ -114,7 +112,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="socialIcon group transition"
               >
-                <FaLinkedinIn className="text-blue-700 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
+                <FaLinkedin className="text-blue-700 text-xl group-hover:scale-125 group-hover:-translate-y-1 transition-transform duration-300" />
               </Link>
               <Link
                 href="https://twitter.com/nurulazam_dev"

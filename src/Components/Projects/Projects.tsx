@@ -2,9 +2,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { projectsData } from "@/assets/data/projectsData";
+import { projectsData, type Project } from "public/assets/data/projectsData";
 
-const categories = [
+type Category = {
+  label: string;
+  value: string;
+};
+
+const categories: Category[] = [
   { label: "All", value: "all" },
   { label: "Full Stack", value: "fullStack" },
   { label: "Frontend", value: "frontend" },
@@ -14,14 +19,16 @@ const categories = [
 const INITIAL_PROJECTS = 6;
 const MORE_PROJECTS = 3;
 
-const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [visibleCount, setVisibleCount] = useState(INITIAL_PROJECTS);
+const Projects: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_PROJECTS);
 
   const filteredProjects =
     selectedCategory === "all"
       ? projectsData
-      : projectsData.filter((project) => project.category === selectedCategory);
+      : projectsData.filter(
+          (project: Project) => project.category === selectedCategory,
+        );
 
   // Reset visibleCount when category changes
   React.useEffect(() => {
@@ -44,7 +51,7 @@ const Projects = () => {
             Category Filter part
           ====================== */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {categories?.map((cat) => (
+          {categories?.map((cat: Category) => (
             <button
               key={cat?.value}
               onClick={() => setSelectedCategory(cat?.value)}
@@ -66,7 +73,7 @@ const Projects = () => {
               No projects found in this category.
             </div>
           )}
-          {visibleProjects.map((project, idx) => (
+          {visibleProjects.map((project: Project, idx: number) => (
             <div
               key={project?.id}
               className="bg-white shadow-xl rounded-xl p-4 flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"

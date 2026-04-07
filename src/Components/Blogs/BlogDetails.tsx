@@ -1,9 +1,15 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { FormEvent, useMemo, useState } from "react";
 import { useParams } from "next/navigation";
-import { blogsData } from "@/assets/data/blogsData";
+import { blogsData } from "public/assets/data/blogsData";
+
+type IComment = {
+  name: string;
+  email: string;
+  comment: string;
+  date: string;
+};
 
 const BlogDetails = () => {
   const params = useParams();
@@ -12,13 +18,13 @@ const BlogDetails = () => {
   const blog = useMemo(() => blogsData?.find((b) => b?.id === id), [id]);
 
   // Comment state
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState<IComment[]>([]);
   const [commentInput, setCommentInput] = useState("");
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [error, setError] = useState("");
 
-  const handleCommentSubmit = (e) => {
+  const handleCommentSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!emailInput.trim() || !nameInput.trim() || !commentInput.trim()) {
       setError("Email, name, and comment are required.");
@@ -278,8 +284,8 @@ const BlogDetails = () => {
       <style jsx global>{`
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&display=swap");
         html {
-          font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial,
-            "Merriweather", serif;
+          font-family:
+            "Inter", "Segoe UI", "Helvetica Neue", Arial, "Merriweather", serif;
         }
         .font-display {
           font-family: "Inter", "Segoe UI", Arial, sans-serif;

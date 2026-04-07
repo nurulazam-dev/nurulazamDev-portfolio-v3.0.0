@@ -5,7 +5,12 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import brandLogo from "../../assets/images/logo/nurulazan-dev-logo.png";
 
-const navLinks = [
+type NavLink = {
+  href: string;
+  label: string;
+};
+
+const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
@@ -13,9 +18,9 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const Header = () => {
+const Header: React.FC = () => {
   const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const handleNavClick = () => setMenuOpen(false);
 

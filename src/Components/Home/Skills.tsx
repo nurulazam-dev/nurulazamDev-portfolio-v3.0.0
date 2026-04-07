@@ -1,5 +1,5 @@
 "use client";
-import { skillsData } from "@/assets/data/dataBank";
+import { skillsData } from "public/assets/data/dataBank";
 import Image from "next/image";
 
 const Skills = () => {

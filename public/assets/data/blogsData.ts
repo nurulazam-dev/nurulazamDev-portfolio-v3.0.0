@@ -3,7 +3,19 @@ import blogImg2 from "../images/Blogs_banner/from-imposter-syndrome-to-confidenc
 import blogImg4 from "../images/Blogs_banner/why-soft-skills-matter-more-than-you-think-in-web-development.png";
 import blogImg3 from "../images/Blogs_banner/the-power-of-consistency-daily-coding-habits.png";
 
-export const blogsData = [
+export type Blog = {
+  id: string;
+  image: any;
+  date: string;
+  author: string;
+  slug: string;
+  tags: string[];
+  title: string;
+  desc: string;
+  content: string;
+};
+
+export const blogsData: Blog[] = [
   {
     id: "blog001",
     image: blogImg1,
