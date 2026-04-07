@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../assets/images/hero/mnaHeroImg.png";
+import HeroImg from "public/assets/images/hero/mnaHeroImg.png";
 
 const Hero = () => {
   return (

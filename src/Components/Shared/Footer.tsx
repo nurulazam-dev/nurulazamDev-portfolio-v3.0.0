@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import swal from "sweetalert";
 import Image from "next/image";
-import brandLogo from "../../assets/images/logo/nurulazan-dev-logo.png";
+import brandLogo from "public/assets/images/logo/nurulazan-dev-logo.png";
 
 const Footer = () => {
   return (

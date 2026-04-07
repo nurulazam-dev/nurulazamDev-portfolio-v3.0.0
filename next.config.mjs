@@ -1,7 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["nurulazam-dev.web.app", "i.ibb.co"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "nurulazam-dev.web.app",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

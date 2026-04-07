@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import brandLogo from "../../assets/images/logo/nurulazan-dev-logo.png";
+import brandLogo from "public/assets/images/logo/nurulazan-dev-logo.png";
 
 type NavLink = {
   href: string;

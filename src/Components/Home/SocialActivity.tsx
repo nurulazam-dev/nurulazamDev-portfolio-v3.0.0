@@ -1,5 +1,3 @@
-import React from "react";
-
 const activities = [
   {
     title: "Financial Secretary",
@@ -213,7 +211,8 @@ const SocialActivity = () => {
           }
         }
         .hover\\:shadow-3xl:hover {
-          box-shadow: 0 10px 40px 0 rgba(80, 80, 200, 0.18),
+          box-shadow:
+            0 10px 40px 0 rgba(80, 80, 200, 0.18),
             0 2px 4px 0 rgba(0, 0, 0, 0.08);
         }
       `}</style>
