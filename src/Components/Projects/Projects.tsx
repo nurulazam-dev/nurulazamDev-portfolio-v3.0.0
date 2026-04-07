@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
               className={`px-4 py-2 rounded font-semibold border transition
                 ${
                   selectedCategory === cat?.value
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow"
+                    ? "bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow"
                     : "bg-white text-blue-700 border-blue-200 hover:bg-blue-50"
                 }
               `}
@@ -105,7 +105,7 @@ const Projects: React.FC = () => {
               <div className="mt-auto pt-2">
                 <Link
                   href={`/projects/${project?.id}`}
-                  className="w-full block px-3 py-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition transform focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                  className="w-full block px-3 py-3 text-center bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition transform focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
                 >
                   Project Details
                 </Link>

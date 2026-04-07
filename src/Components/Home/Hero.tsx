@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Typewriter from "typewriter-effect";
+// import { skillsData } from "public/assets/data/dataBank";
 import HeroImg from "public/assets/images/hero/mnaHeroImg.png";
 
 const Hero = () => {
@@ -22,7 +23,7 @@ const Hero = () => {
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-2 animate-fade-in-down">
             Hi, I&apos;m <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 drop-shadow">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-600 drop-shadow">
               Mohammad Nurul Azam
             </span>
           </h1>
@@ -30,13 +31,12 @@ const Hero = () => {
             <Typewriter
               options={{
                 strings: [
-                  "MERN Stack Web Developer",
+                  "Next.js & TypeScript Developer",
                   "Full Stack Developer",
-                  "React Developer",
-                  "Front End Developer",
-                  "Responsive Designer",
-                  "Professional Coder",
-                  "YouTube Content Creator",
+                  "Frontend Engineer (React, Tailwind, Framer Motion)",
+                  "Backend Engineer (Node, Express, Prisma, PostgreSQL)",
+                  "API & Database Architect",
+                  "Clean UI & DX Focused Developer",
                 ],
                 autoStart: true,
                 loop: true,
@@ -44,14 +44,27 @@ const Hero = () => {
             />
           </h2>
           <p className="text-gray-700 mb-4 animate-fade-in-up">
-            I specialize in building dynamic and responsive web applications
-            using the MERN (MongoDB, Express.js, React.js, Node.js) stack. I
-            love crafting efficient, user-friendly interfaces and robust
-            server-side functionality.
+            I build modern full-stack apps with Next.js, TypeScript, Node.js,
+            Express, Prisma, PostgreSQL, and MongoDB. I focus on fast
+            interfaces, smooth animations, scalable backend architecture, and
+            developer-friendly code quality.
           </p>
+          {/*  <div className="mb-4 flex flex-wrap gap-2 animate-fade-in-up">
+            {skillsData
+              .flatMap((group) => group.skillsData)
+              .slice(0, 8)
+              .map((skill) => (
+                <span
+                  key={skill.name}
+                  className="rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs font-semibold text-slate-700"
+                >
+                  {skill.name}
+                </span>
+              ))}
+          </div> */}
           <div className="flex gap-4 mt-2 animate-fade-in-up">
             <Link href="/contact">
-              <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+              <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold rounded-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                 {/* Hire Me Icon */}
                 <svg
                   className="w-5 h-5 animate-bounce-right"

@@ -1,8 +1,11 @@
 "use client";
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { LogIn, Menu, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "next-themes";
 import brandLogo from "public/assets/images/logo/nurulazan-dev-logo.png";
 
 type NavLink = {
@@ -21,58 +24,31 @@ const navLinks: NavLink[] = [
 const Header: React.FC = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
 
   const handleNavClick = () => setMenuOpen(false);
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur shadow-lg transition-all duration-300">
-      <div className="container mx-auto flex items-center justify-between px-4 md:px-6 py-3">
-        {/* ======================
-                 Logo
-        ====================== */}
-        <Link href="/" className="flex items-center group">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-slate-200/60 bg-white/85 backdrop-blur">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+        {/* Left: Brand logo */}
+        <Link href="/" className="flex items-center">
           <Image
             src={brandLogo}
             alt="M N A"
-            loading="lazy"
-            className="w-full h-9 object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-9 w-auto object-contain"
+            priority
           />
         </Link>
-        {/* ======================
-                 Hamburger
-        ====================== */}
-        <button
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-          aria-label="Toggle navigation"
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          <span
-            className={`block h-0.5 w-6 bg-blue-700 rounded transition-all duration-300 ${
-              menuOpen ? "rotate-45 translate-y-1.5" : ""
-            }`}
-          ></span>
-          <span
-            className={`block h-0.5 w-6 bg-blue-700 rounded my-1 transition-all duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          ></span>
-          <span
-            className={`block h-0.5 w-6 bg-blue-700 rounded transition-all duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-1.5" : ""
-            }`}
-          ></span>
-        </button>
-        {/* ======================
-               Navigation
-        ====================== */}
-        <nav
-          className={`
-            flex-col md:flex-row md:flex gap-2 md:gap-4
-            fixed md:static top-16 left-0 w-full md:w-auto bg-white/95 md:bg-transparent
-            shadow-lg md:shadow-none transition-all duration-300
-            ${menuOpen ? "flex" : "hidden md:flex"}
-          `}
-        >
+
+        {/* Middle: Desktop nav links */}
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-2 md:flex">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
@@ -82,37 +58,85 @@ const Header: React.FC = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={handleNavClick}
-                className={`relative px-4 py-3 md:px-3 md:py-[6px] font-medium rounded transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400
-                  ${
-                    isActive
-                      ? "text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow"
-                      : "text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600"
-                  }
-                `}
+                className={`rounded-md px-3 py-2 text-sm font-medium transition ${
+                  isActive
+                    ? "bg-gradient-to-r from-cyan-500 to-indigo-600 text-white"
+                    : "text-slate-700 hover:bg-slate-100"
+                }`}
               >
                 {link.label}
               </Link>
             );
           })}
         </nav>
+
+        {/* Right: Login + theme toggle + mobile trigger */}
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="rounded-md border border-slate-200 p-2 text-slate-700 hover:bg-slate-100"
+          >
+            {mounted && resolvedTheme === "dark" ? (
+              <Sun size={18} />
+            ) : (
+              <Moon size={18} />
+            )}
+          </button>
+          <Link
+            href="/login"
+            className="hidden items-center gap-2 rounded-md bg-gradient-to-r from-cyan-500 to-indigo-600 px-3 py-2 text-sm font-semibold text-white md:inline-flex"
+          >
+            <LogIn size={16} />
+            Login
+          </Link>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Toggle navigation"
+            className="rounded-md border border-slate-200 p-2 text-slate-700 md:hidden"
+          >
+            {menuOpen ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
       </div>
-      <style jsx global>{`
-        header {
-          box-shadow: 0 4px 24px 0 rgba(80, 112, 255, 0.07);
-        }
-        @media (max-width: 767px) {
-          nav {
-            position: fixed !important;
-            left: 0 !important;
-            top: 56px !important;
-            width: 100vw !important;
-            background: rgba(255, 255, 255, 0.97) !important;
-            z-index: 40 !important;
-            border-radius: 0 0 1rem 1rem;
-          }
-        }
-      `}</style>
+
+      {/* Mobile nav links */}
+      {menuOpen && (
+        <nav className="border-t border-slate-200/70 bg-white px-4 py-3 md:hidden">
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleNavClick}
+                  className={`rounded-md px-3 py-2 text-sm font-medium ${
+                    isActive
+                      ? "bg-gradient-to-r from-cyan-500 to-indigo-600 text-white"
+                      : "text-slate-700 hover:bg-slate-100"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <Link
+              href="/login"
+              onClick={handleNavClick}
+              className="mt-1 inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-cyan-500 to-indigo-600 px-3 py-2 text-sm font-semibold text-white"
+            >
+              <LogIn size={16} />
+              Login
+            </Link>
+          </div>
+        </nav>
+      )}
     </header>
   );
 };

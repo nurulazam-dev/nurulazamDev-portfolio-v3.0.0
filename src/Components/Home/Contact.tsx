@@ -64,7 +64,7 @@ const Contact = () => {
               src="https://i.ibb.co/wSXk8nP/contact-us.png"
               alt="Contact"
             />
-            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 drop-shadow mb-1 text-center">
+            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-600 drop-shadow mb-1 text-center">
               Mohammad Nurul Azam
             </h2>
             <p className="font-semibold text-center text-gray-600 mb-2">
@@ -201,7 +201,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                className="w-full py-3 bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold rounded shadow-lg hover:from-blue-700 hover:to-purple-700 transition transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
               >
                 Send Message
               </button>

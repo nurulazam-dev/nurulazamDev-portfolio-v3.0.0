@@ -80,7 +80,7 @@ const ProjectDetails = () => {
                   href={project.liveProject}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
+                  className="group px-4 py-2 bg-gradient-to-r from-cyan-500 to-indigo-600 text-white rounded flex items-center gap-2 font-semibold shadow transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-400"
                 >
                   Live Site
                   <span className="transform group-hover:translate-x-1 transition-transform duration-300">

@@ -1,5 +1,5 @@
 "use client";
-import { serviceData } from "public/assets/data/dataBank";
+import { skillsData } from "public/assets/data/dataBank";
 import Image from "next/image";
 
 const Services = () => {
@@ -7,22 +7,22 @@ const Services = () => {
     <section className="relative z-10 py-12 px-4 sm:px-8 lg:px-16 bg-white text-gray-900">
       <div className="text-center mb-8 max-w-3xl mx-auto">
         <h4 className="text-base uppercase tracking-widest text-blue-600 mb-2 animate-fade-in-down">
-          My Services
+          Core Skill Categories
         </h4>
         <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-fade-in-down">
-          What I Can Do for You
+          Tech Stack I Work With
         </h1>
         <p className="text-gray-600 mt-4 text-base animate-fade-in-up">
-          From frontend magic to backend logic — I provide a full-stack service
-          experience to bring your vision to life with high-performance,
-          scalable, and visually stunning web applications.
+          Frontend, backend, and toolchain capabilities that power my modern
+          full-stack workflow. I use these technologies to deliver scalable,
+          maintainable, and high-performance applications.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto animate-fade-in-up">
-        {serviceData.map((service, index) => (
+        {skillsData.map((group, index) => (
           <div
-            key={index}
+            key={group.id}
             className="relative group px-6 py-3 rounded-xl border border-gray-200 backdrop-blur-md shadow-md transition-all duration-300 hover:-translate-y-3 hover:shadow-xl hover:border-blue-500 animate-fade-in-down"
             style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
           >
@@ -31,17 +31,26 @@ const Services = () => {
             <div className="relative z-10 flex flex-col items-center text-center">
               <div className="w-40 h-34 flex items-center justify-center  group-hover:scale-110 transition-transform duration-300">
                 <Image
-                  src={service.image}
-                  alt={service.title}
+                  src={group.image}
+                  alt={group.title}
                   width={160}
                   height={160}
                   className="object-contain"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {service.title} Development
+                {group.title}
               </h3>
-              <p className="text-gray-600 text-sm">{service.desc}</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {group.skillsData.map((skill) => (
+                  <span
+                    key={skill.name}
+                    className="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-700"
+                  >
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

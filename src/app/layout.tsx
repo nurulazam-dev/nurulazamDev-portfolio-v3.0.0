@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/Components/Shared/Header";
 import Footer from "@/Components/Shared/Footer";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import AnimationProvider from "@/providers/AnimationProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,11 +40,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="mt-8 md:mt-10 lg:mt-15">
-            <div className="mx-auto">{children}</div>
-          </main>
-          <Footer />
+          <AnimationProvider>
+            <Header />
+            <main className="mt-8 md:mt-10 lg:mt-15">
+              <div className="mx-auto">{children}</div>
+            </main>
+            <Footer />
+          </AnimationProvider>
         </ThemeProvider>
       </body>
     </html>
