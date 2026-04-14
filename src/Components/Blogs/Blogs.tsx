@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { blogsData, type Blog } from "public/assets/data/blogsData";
+import { blogsData, type IBlog } from "public/assets/data/blogsData";
 import SectionHeader from "../Shared/SectionHeader";
 
 const Blogs: React.FC = () => {
@@ -12,7 +12,7 @@ const Blogs: React.FC = () => {
       <SectionHeader subtitle="Latest Blogs" title="Insights & Articles" />
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
-        {blogsData?.map((blog: Blog, idx: number) => (
+        {blogsData?.map((blog: IBlog, idx: number) => (
           <div
             key={blog.id}
             className="group relative bg-white rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"

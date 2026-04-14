@@ -3,7 +3,7 @@ import blogImg2 from "../images/Blogs_banner/from-imposter-syndrome-to-confidenc
 import blogImg4 from "../images/Blogs_banner/why-soft-skills-matter-more-than-you-think-in-web-development.png";
 import blogImg3 from "../images/Blogs_banner/the-power-of-consistency-daily-coding-habits.png";
 
-export type Blog = {
+export type IBlog = {
   id: string;
   image: any;
   date: string;
@@ -15,11 +15,11 @@ export type Blog = {
   content: string;
 };
 
-export const blogsData: Blog[] = [
+export const blogsData: IBlog[] = [
   {
     id: "blog001",
     image: blogImg1,
-    date: "July 2022",
+    date: "Sept 2025",
     author: "mnaoffcialbd",
     slug: "staying-relevant-learning-new-technologies-without-burning-out",
     tags: [
@@ -132,7 +132,7 @@ export const blogsData: Blog[] = [
   {
     id: "blog002",
     image: blogImg2,
-    date: "July 2022",
+    date: "Nov 2025",
     author: "MNA Web Programming",
     slug: "from-imposter-syndrome-to-confidence",
     tags: [
@@ -219,7 +219,7 @@ export const blogsData: Blog[] = [
   {
     id: "blog003",
     image: blogImg3,
-    date: "July 2022",
+    date: "Feb 2026",
     author: "Mohammad Nurul Azam",
     slug: "the-power-of-consistency-daily-coding-habits",
     tags: ["dailycodinghabits", "developerproductivity", "codingcareertips"],
@@ -260,7 +260,7 @@ Your result? Long-term mastery.</p>
   {
     id: "blog004",
     image: blogImg4,
-    date: "July 2022",
+    date: "April 2026",
     author: "nurulazam-dev",
     slug: "why-soft-skills-matter-more-than-you-think-in-web-development",
     tags: [

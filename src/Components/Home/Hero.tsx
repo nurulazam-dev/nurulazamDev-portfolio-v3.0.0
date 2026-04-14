@@ -138,8 +138,8 @@ const Hero = () => {
               </button>
             </Link>
             <Link
-              href="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
-              download="Nurul_Azan-MERN-Stack-Web-developer-resume.pdf"
+              href="Nurul_Azam-Full-Stack-Developer-resume.pdf"
+              download="Nurul_Azam-Full-Stack-Developer-resume.pdf"
               className="flex w-full items-center justify-center gap-2 rounded-lg border border-blue-600 bg-white px-5 py-3 text-sm font-bold text-blue-700 shadow transition transform hover:-translate-y-1 hover:scale-105 hover:bg-blue-50 sm:w-auto sm:px-6 sm:text-base"
               rel="noopener noreferrer"
             >

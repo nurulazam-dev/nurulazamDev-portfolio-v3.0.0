@@ -63,9 +63,6 @@ const ProjectDetails = () => {
                 project?.category,
               ) && project?.category}
             </span>
-            <span className="px-3 py-1 rounded text-xs font-semibold bg-blue-100 text-blue-700 border border-blue-200 animate-fade-in-down">
-              {project?.projectType}
-            </span>
           </div>
           <div className="flex justify-between items-center mb-5">
             <div>

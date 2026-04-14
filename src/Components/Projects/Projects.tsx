@@ -81,13 +81,13 @@ const Projects: React.FC = () => {
                 minHeight: "370px",
               }}
             >
-              <div className="overflow-hidden rounded-xl mb-4">
+              <div className="overflow-hidden rounded mb-4">
                 <Image
                   src={project?.imageLink}
                   alt={project?.title || "Project Image"}
                   width={500}
-                  height={300}
-                  className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
+                  height={400}
+                  className="w-full h-46 object-cover transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
               </div>

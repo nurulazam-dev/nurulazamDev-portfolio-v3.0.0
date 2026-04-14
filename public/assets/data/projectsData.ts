@@ -1,9 +1,11 @@
-import project1Img from "../images/projects/1-mna-computer-manufacture.png";
-import project3Img from "../images/projects/3-mna-events-ltd.png";
-import project4Img from "../images/projects/4-wind-travels.png";
-import project5Img from "../images/projects/5-mna-munna-photographer.png";
-import project6Img from "../images/projects/6-mna-bike-bazar.png";
-import project7Img from "../images/projects/7-panda-eCommerce.png";
+import project1Img from "../images/projects/1-mna-medistore.png";
+import project2Img from "../images/projects/1-mna-medistore.png";
+import project3Img from "../images/projects/1-mna-computer-manufacture.png";
+// import project3Img from "../images/projects/3-mna-events-ltd.png";
+// import project4Img from "../images/projects/4-wind-travels.png";
+// import project5Img from "../images/projects/5-mna-munna-photographer.png";
+// import project6Img from "../images/projects/6-mna-bike-bazar.png";
+// import project7Img from "../images/projects/7-panda-eCommerce.png";
 
 export type Project = {
   id: string;
@@ -31,30 +33,37 @@ export const projectsData: Project[] = [
     projectColor: "bg-orange-700",
     title: "MNA-MediStore",
     subTitle:
-      "A robust, full-stack e-commerce platform connecting patients, sellers, and admins...",
-    des1: "MNA-MediStore delivers medicine discovery with category filtering, smart search, cart management (add/update/remove), and fully responsive UI for mobile, tablet, and desktop. It includes complete role-based access for Admin, Seller, and Customer dashboards.",
-    des2: "Admin can manage analytics, categories, medicines, users, and all orders globally. Sellers can manage inventory (including inactive/soft delete), process medicine orders, and use dedicated onboarding flows. Customers can track orders, view spending stats, and cancel before processing.",
-    des3: "Built with Next.js 16 (App Router), TypeScript, Tailwind CSS, Better Auth, Redux Toolkit, TanStack Form, Zod, Recharts, Cloudinary, T3-OSS/Env-Nextjs, Sonner, and Sharp. Testing credentials: admin@medistore.com/Admin123, seller@medistore.com/Seller123, customer@medistore.com/Customer123.",
+      "Healthcare e-commerce platform connecting customers, sellers, and admins...",
+
+    des1: "MNA-MediStore is a full-stack healthcare e-commerce platform that connects customers, pharmacy sellers, and administrators within a unified system. It enables users to discover medicines, manage orders, and interact through a role-based dashboard system.",
+
+    des2: "The platform features three core roles: Admin, Seller, and Customer. Admins manage users, categories, medicines, and system-wide orders. Sellers handle inventory, track sales, and manage medicine listings. Customers can browse medicines, manage carts, place orders, and track purchase history.",
+
+    des3: "Built with a modern and scalable architecture using Next.js (App Router), TypeScript, Prisma, and PostgreSQL. It includes secure multi-role authentication, RESTful API integration, dynamic dashboards with analytics, and optimized UI/UX for all devices.",
+
     technologies: [
       "Next.js 16 (App Router)",
       "TypeScript",
-      "Prisma ORM",
-      "PostgreSQL",
       "Tailwind CSS",
       "Better Auth",
+      "Node.js",
+      "Express.js",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Redux Toolkit",
       "TanStack Form",
       "Zod",
       "Recharts",
       "Cloudinary",
-      "T3-OSS Env Nextjs",
-      "Sonner",
-      "Sharp",
+      "CORS",
+      "Dotenv",
     ],
+
     imageLink: project1Img,
     youtubeLink: "",
     liveProject: "https://mna-medistore.vercel.app",
-    clientCode: "https://github.com/nurulazam-dev/MNA-MediStore-Frontend",
-    serverCode: "https://github.com/nurulazam-dev/MNA-MediStore-Backend",
+    clientCode: "https://github.com/nurulazam-dev/mna-medistore-frontend",
+    serverCode: "https://github.com/nurulazam-dev/mna-medistore-backend",
   },
   {
     id: "project002",
@@ -62,34 +71,47 @@ export const projectsData: Project[] = [
     projectType: "Full Stack",
     projectColor: "bg-orange-700",
     title: "MNA-ServiceHub",
-    subTitle:
-      "A robust, full-stack  service provision platform connecting users, service_providers,manager, and admins...",
-    des1: "MNA-MediStore  delivers medicine discovery with category filtering, smart search, cart management (add/update/remove), and fully responsive UI for mobile, tablet, and desktop. It includes complete role-based access for Admin, Seller, and Customer dashboards.",
-    des2: "Admin can manage analytics, categories, medicines, users, and all orders globally. Sellers can manage inventory (including inactive/soft delete), process medicine orders, and use dedicated onboarding flows. Customers can track orders, view spending stats, and cancel before processing.",
-    des3: "Built with Next.js 16 (App Router), TypeScript, Tailwind CSS, Better Auth, Redux Toolkit, TanStack Form, Zod, Recharts, Cloudinary, T3-OSS/Env-Nextjs, Sonner, and Sharp. Testing credentials: admin@medistore.com/Admin123, seller@medistore.com/Seller123, customer@medistore.com/Customer123.",
+    subTitle: "Multi-role Service Booking & Management Platform",
+
+    des1: "MNA-ServiceHub is a full-stack, role-based service booking platform that connects customers, service providers, managers, and administrators in a single ecosystem. It allows users to discover local services, create service requests, and manage the entire service lifecycle efficiently.",
+
+    des2: "The system supports five core roles: Admin, Manager, Service Provider, Job Candidate, and Customer. Managers and admins handle request approval, provider assignment, and scheduling, while service providers manage availability, complete tasks, and define service costs. Customers can request services, track progress, make payments, and submit reviews after completion.",
+
+    des3: "Built with a scalable architecture using Next.js (App Router), TypeScript, Express.js, Prisma, and PostgreSQL. The platform includes secure JWT-based authentication, Stripe payment integration, PDF invoice generation, role-based dashboards, schedule management with strict business rules, and a complete service request lifecycle from creation to review.",
+
     technologies: [
       "Next.js 16 (App Router)",
       "TypeScript",
-      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
       "Prisma ORM",
       "PostgreSQL",
       "Better Auth",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "React Query (TanStack Query)",
       "TanStack Form",
-      "Zod",
+      "TanStack Table",
+      "Axios",
       "Recharts",
+      "JWT (jsonwebtoken)",
+      "Multer",
       "Cloudinary",
-      "T3-OSS Env Nextjs",
-      "Sonner",
-      "Sharp",
+      "Nodemailer",
+      "Stripe",
+      "Zod",
+      "CORS",
+      "Dotenv",
     ],
-    imageLink: project1Img,
+
+    imageLink: project2Img,
     youtubeLink: "",
-    liveProject: "https://mna-medistore.vercel.app",
-    clientCode: "https://github.com/nurulazam-dev/MNA-MediStore-Frontend",
-    serverCode: "https://github.com/nurulazam-dev/MNA-MediStore-Backend",
+    liveProject: "https://mna-servicehub.vercel.app",
+    clientCode: "https://github.com/nurulazam-dev/mna-servicehub-frontend",
+    serverCode: "https://github.com/nurulazam-dev/mna-servicehub-backend",
   },
   {
-    id: "project01",
+    id: "project003",
     category: "fullStack",
     projectType: "E-Commerce",
     projectColor: "bg-orange-700",
@@ -110,7 +132,7 @@ export const projectsData: Project[] = [
       "Express JS",
       "MongoDB",
     ],
-    imageLink: project1Img,
+    imageLink: project3Img,
     youtubeLink: "https://youtu.be/RZHDuzQHksM",
     liveProject: "https://mna-computer-manufacturer.web.app",
     clientCode:
@@ -118,6 +140,7 @@ export const projectsData: Project[] = [
     serverCode:
       "https://github.com/nurulazam-dev/mna-computer-manufacturer-server",
   },
+  /* 
   {
     id: "project02",
     category: "fullStack",
@@ -186,7 +209,6 @@ export const projectsData: Project[] = [
     liveProject: "https://wind-travels-agency.netlify.app/",
     clientCode: "https://github.com/nurulazam-dev/wind-travel-agency",
   },
-
   {
     id: "project05",
     category: "frontend",
@@ -299,5 +321,5 @@ export const projectsData: Project[] = [
     liveProject: "https://mna-servicehub-backend.vercel.app",
     clientCode: "https://github.com/nurulazam-dev/MNA-ServiceHub-Frontend",
     serverCode: "https://github.com/nurulazam-dev/MNA-ServiceHub-Backend",
-  },
+  }, */
 ];

@@ -1,7 +1,8 @@
-"use client";
+"use server";
+
 import ProjectDetails from "@/Components/Projects/ProjectDetails";
 
-export default function ProjectDetailsPage() {
+export default async function ProjectDetailsPage() {
   return (
     <>
       <ProjectDetails />
